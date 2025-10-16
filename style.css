@@ -83,3 +83,67 @@ body {
     
   }
 }
+#imgmvv { /* Este da formato a las imagenes*/
+    height: 50px;
+    width: 50px;
+    position: relative;
+    justify-content: center;
+}
+
+#fontmvv{ /*Fuente y color de titulos de cards*/
+    font-family: Cormorant-Garamond;
+    color: #3d2e25;
+}
+
+#txtmvv { /*Fuente y color de contenido cards*/
+    font-family: Poppins, sans-serif;
+    color: oklab(31.938% .0164289 .021355 / .8);
+}
+#nuestro-equipo img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+#nuestro-equipo h4 {
+  font-weight: bold;
+}
+#nuestro-equipo p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#nuestro-equipo {
+    background-color: whitesmoke ;
+}
+.miembros h2, h4{
+    font-family: "Cormorant Garamond", serif;
+}
+.miembros p{
+    font-family: "Poppins", sans-serif;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(176, 129, 7, 0.717); 
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: -70px; /* mueve la flecha fuera del contenedor */
+}
+
+.carousel-control-next {
+  right: -70px;
+}
+.carousel-item {
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+
