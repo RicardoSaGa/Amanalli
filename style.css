@@ -1,4 +1,20 @@
 
+#imgmvv { /* Este da formato a las imagenes*/
+    height: 50px;
+    width: 50px;
+    position: relative;
+    justify-content: center;
+}
+
+#fontmvv{ /*Fuente y color de titulos de cards*/
+    font-family: Cormorant-Garamond;
+    color: #3d2e25;
+}
+
+#txtmvv { /*Fuente y color de contenido cards*/
+    font-family: Poppins, sans-serif;
+    color: oklab(31.938% .0164289 .021355 / .8);
+}
 #nuestro-equipo img {
   max-width: 200px;
   height: auto;
