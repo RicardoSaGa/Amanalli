@@ -1,1 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap');
 
+body {
+  font-family: 'Arial', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.historia-container {
+  display: flex;
+  flex-direction: row; 
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #3D2E25;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.texto {
+  flex: 1 1 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.texto h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #3D2E25;
+  font-family: 'Garamond', serif;
+}
+
+.texto p {
+  color: #3D2E25;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.imagen {
+  flex: 1 1 50%;         
+  display: flex;         
+  align-items: stretch;  
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.imagen img {
+  width: 100%;           
+  height: 100%;          
+  object-fit: cover;     
+  display: block;
+  margin: 0;             
+  border-radius: 0;
+}
+
+
+.espacio-imagen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .historia-container {
+    flex-direction: column;
+  }
+
+  .texto, .imagen {
+    flex: 1 1 100%;
+  }
+
+  .texto {
+    padding: 20px;
+    
+  }
+}
