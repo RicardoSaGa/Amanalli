@@ -138,6 +138,40 @@ nav{
 /* ============================= */
 /* SECCIÓN HISTORIA             */
 /* ============================= */
+
+.compromiso-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.compromiso-container h7 {
+  font-size: 1.2rem;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.barra-lateral {
+  width: 10px;
+  min-height: 80px; /* fuerza que se vea aunque esté vacío */
+  background-color: orange;
+  border-radius: 4px;
+}
+
+.compromiso-item {
+  min-height: 60px; /* asegura que el contenedor tenga altura */
+}
+
+.impacto-container {
+  background-color: #D9A679;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
 .historia-container {
   background-color: white;
   border-radius: 10px;
@@ -153,13 +187,29 @@ nav{
   gap: 2rem;
 }
 
+.compromiso-fila {
+  margin-bottom: 2.5rem 2.5rem, 2.5rem, 2.5rem; /* equivalente a mb-4 */
+}
+
+
 .texto {
   flex: 1 1 100%;
   padding: 20px;
   box-sizing: border-box;
 }
 
+.texto h1 {
+  font-size: 3rem;
+}
+
 .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.texto h5 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--color-fondo);
