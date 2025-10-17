@@ -156,7 +156,7 @@ nav{
 .barra-lateral {
   width: 10px;
   min-height: 80px; /* fuerza que se vea aunque esté vacío */
-  background-color: orange;
+  background-color: #c4785e;
   border-radius: 4px;
 }
 
