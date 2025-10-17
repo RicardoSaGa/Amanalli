@@ -39,6 +39,55 @@ body {
 }
 
 /* ============================= */
+/* SECCIÓN NAVBAR */
+/* ============================= */
+nav{
+    background-color: #f5efe6;
+    color: #3d2e25;
+    width: 100%;
+    font-weight: 500;
+}
+.logoNavbar{
+    width: 60px;
+	height: auto;
+}
+.imgNavbar{
+    width: 25px;
+    height: auto;
+}
+.tituloheader {
+    display: inline-block;
+    font-family: "Cormorant Garamond", serif;
+	color: #3d2e25;
+	margin-top: 15px;
+	font-size: 20px;
+	font: bold;
+}
+.navbar-nav .nav-link:hover,
+.navbar h2:hover {
+    color: #c4785e;
+}
+.paginaActiva{
+    color: #c4785e!important;
+}
+.hoverPerfil img:hover {
+    content: url('./pictures/perfil_de_usuario_light.png');
+}
+.hoverCarrito img:hover {
+    content: url('./pictures/carrito_de_productos_light.png');
+}
+
+/* Mobile vs Desktop responsividad*/
+#usuarioMovil { display: flex; }
+#usuarioDesktop { display: none; }
+
+@media (min-width: 1200px) {
+    #usuarioMovil { display: none; }
+    #usuarioDesktop { display: flex; }
+}
+
+
+/* ============================= */
 /* SECCIÓN MISIÓN, VISIÓN, VALORES */
 /* ============================= */
 .card-mvv {

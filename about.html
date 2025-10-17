@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanalli</title>
+  <title>Amanalli - Acerca de</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,9 +19,96 @@
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ICO -->
+  <link rel="icon" href="./Pictures/logo_Amanalli.png">
 </head>
 
 <body style="background-color: var(--color-fondo-pagina);">
+
+  <!-- NAVBAR -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <!-- LOGO -->
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="./Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
+          <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
+        </a>
+
+        <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- PERFIL Y CARRITO (display móvil) -->
+          <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverPerfil" href="#">
+                <img src="./Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverCarrito" href="#">
+                <img src="./Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+              </a>
+            </li>
+          </ul>
+
+          <!-- BOTÓN HAMBURGUESA -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- LINKS DEL MENÚ (desktop / display de computadora)-->
+        <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
+          <ul class="navbar-nav text-center ">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link paginaActiva" href="about.html">Acerca de</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
+        <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center hoverPerfil" href="#">
+              <img src="./Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center hoverCarrito" href="#">
+              <img src="./Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
+      <div class="collapse d-xl-none " id="menuMobile">
+        <ul class="navbar-nav py-3 px-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link paginaActiva" href="about.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- Sección Misión, Visión y Valores -->
   <div class="container py-5 fade-in">
@@ -185,7 +272,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/xime.jpeg" alt="Ximena Amahirany Martinez Maciel" class="img-fluid rounded" />
+                  <img src="./Pictures/xime.jpg" alt="Ximena Amahirany Martinez Maciel" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Ximena Amahirany Martinez Maciel</h4>
