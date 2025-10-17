@@ -1,0 +1,234 @@
+/* ============================= */
+/* VARIABLES GLOBALES EN :ROOT  */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-fondo: #3d2e25;
+  --color-hover-enlace: #c6785e;
+  --color-icono: #d9a679;
+  --color-hover-icono: #c6785e;
+  --color-text: #e3ddd3;
+  --color-fondo-pagina: #f5efe6;
+
+  --fuente-principal: 'Cormorant Garamond', serif;
+  --fuente-parrafos: 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES            */
+/* ============================= */
+body {
+  font-family: var(--fuente-parrafos);
+  background-color: var(--color-fondo-pagina);
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================= */
+/* SECCIÓN MISIÓN, VISIÓN, VALORES */
+/* ============================= */
+#imgmvv {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+#fontmvv {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 1.3rem;
+}
+
+#txtmvv {
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* SECCIÓN HISTORIA             */
+/* ============================= */
+.historia-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--color-fondo);
+  overflow: hidden;
+}
+
+.texto {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.texto p {
+  color: var(--color-fondo);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: var(--fuente-parrafos);
+}
+
+.imagen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive historia */
+@media (max-width: 768px) {
+  .historia-container {
+    flex-direction: column;
+  }
+
+  .texto {
+    padding: 20px;
+  }
+}
+
+/* ============================= */
+/* SECCIÓN EQUIPO               */
+/* ============================= */
+#nuestro-equipo {
+  background-color: whitesmoke;
+}
+
+.miembros h2,
+.miembros h4 {
+  font-family: var(--fuente-principal);
+}
+
+.miembros p {
+  font-family: var(--fuente-parrafos);
+}
+
+#nuestro-equipo img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#nuestro-equipo h4 {
+  font-weight: bold;
+}
+
+#nuestro-equipo p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Carrusel personalizado */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(176, 129, 7, 0.717);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: -70px;
+}
+
+.carousel-control-next {
+  right: -70px;
+}
+
+.carousel-item {
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ============================= */
+/* FOOTER                       */
+/* ============================= */
+.footer {
+  background-color: var(--color-fondo);
+}
+
+.brand {
+  font-size: 2rem;
+  color: var(--color-icono);
+  font-weight: bold;
+  font-family: var(--fuente-principal);
+}
+
+.tagline {
+  font-family: var(--fuente-parrafos);
+  font-size: 1rem;
+  color: white;
+}
+
+.section-title {
+  color: var(--color-icono);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: var(--fuente-principal);
+}
+
+.footer-link {
+  font-family: var(--fuente-parrafos);
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-hover-enlace);
+}
+
+.social-icon {
+  background-color: var(--color-icono);
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background-color: var(--color-hover-icono);
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-family: var(--fuente-parrafos);
+  color: var(--color-text);
+}
+
+
