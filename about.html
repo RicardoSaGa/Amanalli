@@ -24,11 +24,11 @@
 <body style="background-color: var(--color-fondo-pagina);">
 
   <!-- Sección Misión, Visión y Valores -->
-  <div class="container py-5">
+  <div class="container py-5 fade-in">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <!-- Misión -->
       <div class="col">
-        <div class="shadow p-3 bg-white rounded">
+        <div class="card-mvv">
           <img id="imgmvv" src="./Pictures/Mision.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Misión</h5>
@@ -41,8 +41,8 @@
 
       <!-- Visión -->
       <div class="col">
-        <div class="shadow p-3 bg-white rounded">
-          <img id="imgmvv" src="./Pictures/Vision.png" class="rounded mx-auto d-block" alt="Visión">
+        <div class="card-mvv">
+          <img id="imgmvv" src="./Pictures/Vision.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Visión</h5>
             <p id="txtmvv" class="text-center">Ser la plataforma líder en México que conecta artesanos
@@ -54,8 +54,8 @@
 
       <!-- Valores -->
       <div class="col">
-        <div class="shadow p-3 bg-white rounded">
-          <img id="imgmvv" src="./Pictures/Valores.png" class="rounded mx-auto d-block" alt="Valores">
+        <div class="card-mvv">
+          <img id="imgmvv" src="./Pictures/Valores.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Valores</h5>
             <p id="txtmvv" class="text-center">Autenticidad, respeto, comercio justo, sostenibilidad y
@@ -68,7 +68,7 @@
   </div>
 
   <!-- Sección Nuestra Historia -->
-  <section class="historia-container container my-5">
+  <section class="historia-container container my-5 fade-in">
     <div class="row">
       <div class="col-md-6 texto">
         <h2>Nuestra Historia</h2>
@@ -83,142 +83,152 @@
           conviertes en parte de esta historia.</p>
       </div>
       <div class="col-md-6 imagen">
-        <img src="Pictures/Bolsa.jpg" alt="Manipulando barro" class="img-fluid rounded">
+        <img src="./Pictures/Bolsa.jpg" alt="Manipulando barro" class="img-fluid rounded">
       </div>
     </div>
   </section>
 
   <!-- Sección Nuestro Equipo -->
-  <div class="miembros container my-5">
+  <div class="miembros container my-5 fade-in">
     <h2 class="text-center mb-4">Nuestro Equipo</h2>
     <section id="nuestro-equipo" class="rounded-3 shadow p-4 bg-light">
-      <div id="equipoCarousel" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel">
+      <div id="equipoCarousel" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel"
+        data-bs-interval="3000">
         <div class="carousel-inner">
-          <!-- Aquí van tus tarjetas del equipo -->
+
           <!-- Tarjeta 1 -->
           <div class="carousel-item active">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/Cam.jpeg" class="img-fluid rounded" alt="foto de cam">
-              </div>
-              <div class="col-md-8">
-                <h4>Camila de la Piedra Méndez</h4>
-                <h6 class="text-muted">Colaboradora</h6>
-                <p>Cam es una niña muy bonita que se peina bien bonito y siempre está cool y a
-                  la moda. es muy lista y tiene actitud siempre positiva. saca adelante al
-                  equipo</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/Cam.jpeg" alt="Camila de la Piedra Méndez" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Camila de la Piedra Méndez</h4>
+                  <h6 class="rol-dinamico">Colaboradora</h6>
+                  <p>Cam es una niña muy bonita que se peina bien bonito y siempre está cool y a la moda. Es muy lista y
+                    tiene actitud siempre positiva. Saca adelante al equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 2 -->
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/Jose.jpg" class="img-fluid rounded" alt="foto de josé">
-              </div>
-              <div class="col-md-8">
-                <h4>José Sánchez Reyes</h4>
-                <h6 class="text-muted">Colaborador</h6>
-                <p>José es un niño muy inteligente y responsable que saca a flote al equipo</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/Jose.jpg" alt="José Sánchez Reyes" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>José Sánchez Reyes</h4>
+                  <h6 class="rol-dinamico">Colaborador</h6>
+                  <p>José es un niño muy inteligente y responsable que saca a flote al equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 3 -->
-
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/Fer.jpeg" class="img-fluid rounded" alt="Foto de Fer">
-              </div>
-              <div class="col-md-8">
-                <h4>Maria Fernanda Juarez Peña</h4>
-                <h6 class="text-muted">Colaboradora</h6>
-                <p>Fer es otra niña muy bonita que se viste siempre muy cool y a la moda. es muy
-                  lista y le gusta ayudar a sus compañeritos de equipo. saca a flote al
-                  equipo.</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/Fer.jpeg" alt="Maria Fernanda Juarez Peña" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Maria Fernanda Juarez Peña</h4>
+                  <h6 class="rol-dinamico">Colaboradora</h6>
+                  <p>Fer es otra niña muy bonita que se viste siempre muy cool y a la moda. Es muy lista y le gusta
+                    ayudar a sus compañeritos de equipo. Saca a flote al equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 4 -->
-
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/neto.jpeg" class="img-fluid rounded" alt="Foto de ineto">
-              </div>
-              <div class="col-md-8">
-                <h4>Ernesto González Salazar</h4>
-                <h6 class="text-muted">Colaborador</h6>
-                <p>Neto es otro niño muy bonito que es ocurrente y siempre tiene algo que decir,
-                  ayuda siempre a su team. saca a flote al equipo.</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/neto.jpeg" alt="Ernesto González Salazar" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Ernesto González Salazar</h4>
+                  <h6 class="rol-dinamico">Colaborador</h6>
+                  <p>Neto es otro niño muy bonito que es ocurrente y siempre tiene algo que decir. Ayuda siempre a su
+                    team. Saca a flote al equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 5 -->
-
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/Noel.jpeg" class="img-fluid rounded" alt="Foto de noel">
-              </div>
-              <div class="col-md-8">
-                <h4>Noel Alejandro Banda Beltran</h4>
-                <h6 class="text-muted">Colaborador</h6>
-                <p>Noel es otro niño muy inteligente que siempre sabe que hacer y tiene
-                  experiencia e inteligencia, además de paciecia para su equipo. saca a flote
-                  al equipo.</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/Noel.jpeg" alt="Noel Alejandro Banda Beltran" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Noel Alejandro Banda Beltran</h4>
+                  <h6 class="rol-dinamico">Colaborador</h6>
+                  <p>Noel es otro niño muy inteligente que siempre sabe qué hacer y tiene experiencia e inteligencia,
+                    además de paciencia para su equipo. Saca a flote al equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 6 -->
-
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/xime.jpeg" class="img-fluid rounded" alt="Foto de ximena">
-              </div>
-              <div class="col-md-8">
-                <h4>Ximena Amahirany Martinez Maciel</h4>
-                <h6 class="text-muted">Colaboradora</h6>
-                <p>Xime es otra niña muy bonita que se peina bien bonito y sabe muchas cosas de
-                  programación, ayuda mucho a resolver el flujo de los procesos. siempre se
-                  viste cool y se hace notar. saca a flote al equipo </p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/xime.jpeg" alt="Ximena Amahirany Martinez Maciel" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Ximena Amahirany Martinez Maciel</h4>
+                  <h6 class="rol-dinamico">Colaboradora</h6>
+                  <p>Xime es otra niña muy bonita que se peina bien bonito y sabe muchas cosas de programación. Ayuda
+                    mucho a resolver el flujo de los procesos. Siempre se viste cool y se hace notar. Saca a flote al
+                    equipo.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Tarjeta 7 -->
-
           <div class="carousel-item">
-            <div class="d-flex flex-wrap align-items-center">
-              <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="./pictures/rick.jpeg" class="img-fluid rounded" alt="Foto de rick">
-              </div>
-              <div class="col-md-8">
-                <h4>Juan Ricardo Saucedo Gallegos</h4>
-                <h6 class="text-muted">Colaborador</h6>
-                <p>rick es otro niño muy inteligente, ocurrente e ingenioso. siempre sabe como
-                  resolver las cosas pues siempre sabe que prompt darle a la IA para que le
-                  de una solución bastante certera. saca a flote al equipo</p>
+            <div class="equipo-card container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4 text-center">
+                  <img src="./pictures/rick.jpeg" alt="Juan Ricardo Saucedo Gallegos" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-8 equipo-texto">
+                  <h4>Juan Ricardo Saucedo Gallegos</h4>
+                  <h6 class="rol-dinamico">Colaborador</h6>
+                  <p>Rick es otro niño muy inteligente, ocurrente e ingenioso. Siempre sabe cómo resolver las cosas pues
+                    siempre sabe qué prompt darle a la IA para que le dé una solución bastante certera. Saca a flote al
+                    equipo.</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- Controles del carrusel -->
-        <button class="carousel-control-prev shadow" type="button" data-bs-target="#equipoCarousel"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next shadow" type="button" data-bs-target="#equipoCarousel"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+        <!-- Controles centrados verticalmente -->
+        <div class="carousel-controls">
+          <button class="carousel-control-prev" type="button" data-bs-target="#equipoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#equipoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+
       </div>
     </section>
   </div>
