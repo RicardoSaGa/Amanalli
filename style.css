@@ -1,0 +1,466 @@
+/* ============================= */
+/* VARIABLES GLOBALES EN :ROOT  */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-fondo: #3d2e25;
+  --color-hover-enlace: #c6785e;
+  --color-icono: #d9a679;
+  --color-hover-icono: #c6785e;
+  --color-text: #e3ddd3;
+  --color-fondo-pagina: #f5efe6;
+
+  --fuente-principal: 'Cormorant Garamond', serif;
+  --fuente-parrafos: 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES            */
+/* ============================= */
+body {  
+  font-family: var(--fuente-parrafos);
+  background-color: var(--color-fondo-pagina);
+  margin: 0;
+  padding: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* SECCIÓN NAVBAR */
+/* ============================= */
+nav{
+    background-color: #f5efe6;
+    color: #3d2e25;
+    width: 100%;
+    font-weight: 500;
+}
+.logoNavbar{
+    width: 60px;
+	height: auto;
+}
+.imgNavbar{
+    width: 25px;
+    height: auto;
+}
+.tituloheader {
+    display: inline-block;
+    font-family: "Cormorant Garamond", serif;
+	color: #3d2e25;
+	margin-top: 15px;
+	font-size: 20px;
+	font: bold;
+}
+.navbar-nav .nav-link:hover,
+.navbar h2:hover {
+    color: #c4785e;
+}
+.paginaActiva{
+    color: #c4785e!important;
+}
+.hoverPerfil img:hover {
+    content: url('./pictures/perfil_de_usuario_light.png');
+}
+.hoverCarrito img:hover {
+    content: url('./pictures/carrito_de_productos_light.png');
+}
+
+/* Mobile vs Desktop responsividad*/
+#usuarioMovil { display: flex; }
+#usuarioDesktop { display: none; }
+
+@media (min-width: 1200px) {
+    #usuarioMovil { display: none; }
+    #usuarioDesktop { display: flex; }
+}
+
+
+/* ============================= */
+/* SECCIÓN MISIÓN, VISIÓN, VALORES */
+/* ============================= */
+.card-mvv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-mvv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+}
+
+
+.card-mvv .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#imgmvv {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+#fontmvv {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 1.3rem;
+}
+
+#txtmvv {
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* SECCIÓN HISTORIA             */
+/* ============================= */
+.historia-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.historia-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.texto {
+  flex: 1 1 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.texto p {
+  color: var(--color-fondo);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: var(--fuente-parrafos);
+}
+
+.imagen {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive ajustes para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .texto,
+  .imagen {
+    flex: 1 1 48%;
+  }
+
+  .texto {
+    padding: 40px;
+  }
+}
+
+/* ============================= */
+/* SECCIÓN EQUIPO               */
+/* ============================= */
+.miembros {
+  background-color: var(--color-fondo-pagina);
+  padding: 2rem 0;
+}
+
+.miembros h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Contenedor del carrusel */
+#nuestro-equipo {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  min-height: 320px;
+} 
+
+/* Tarjeta del equipo */
+.equipo-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 0 3rem;
+  position: relative;
+}
+
+
+.equipo-img img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-texto {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.equipo-texto h4 {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.equipo-texto h6 {
+  font-family: var(--fuente-parrafos);
+  color: var(--color-hover-enlace);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.equipo-texto p {
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.8);
+  line-height: 1.6;
+  font-size: 1rem;  
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  pointer-events: none; /* evita que el contenedor bloquee clics */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--color-icono);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; /* permite clics en los botones */
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: var(--color-hover-icono);
+}
+
+/* Animación fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* FOOTER                       */
+/* ============================= */
+a {
+  transition: color 0.3s ease;
+}
+
+.footer {
+  background-color: var(--color-fondo);
+}
+
+.brand {
+  font-size: 2rem;
+  color: var(--color-icono);
+  font-weight: bold;
+  font-family: var(--fuente-principal);
+}
+
+.tagline {
+  font-family: var(--fuente-parrafos);
+  font-size: 1rem;
+  color: white; 
+}
+
+.section-title {
+  color: var(--color-icono);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: var(--fuente-principal);
+}
+
+.footer-link {
+  font-family: var(--fuente-parrafos);
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-hover-enlace);
+}
+
+.social-icon {
+  background-color: var(--color-icono);
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background-color: var(--color-hover-icono);
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 1rem;
+  font-family: var(--fuente-parrafos);
+  color: var(--color-text);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* HERO: ACERCA DE AMANALLI      */
+/* ============================= */
+:root{
+  --hero-h: 420px; /* ajusta a 480px si quieres más alto en desktop */
+}
+
+.hero-amanalli{
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: var(--hero-h);
+  overflow: hidden;
+  background: var(--color-fondo-pagina);
+  isolation: isolate;         /* asegura overlay por encima de la imagen */
+  text-align: center;
+  color: #fff;
+  font-family: var(--fuente-parrafos);
+}
+
+.hero-amanalli__bg{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  filter: saturate(.9) contrast(.95);
+  z-index: 0;
+}
+
+.hero-amanalli__overlay{
+  position: absolute; inset: 0;
+  background: rgba(61,46,37,.62); /* tu --color-fondo con ~62% de opacidad */
+  z-index: 1;
+}
+
+.hero-amanalli__content{
+  position: relative; z-index: 2;
+  padding-inline: 1rem;
+  max-width: 70ch;
+}
+
+.hero-amanalli__title{
+  margin: 0 0 .35em 0;
+  font-family: var(--fuente-principal);   /* Cormorant Garamond */
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);  /* look de tu captura */
+  line-height: 1.05;
+  letter-spacing: .4px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+
+.hero-amanalli__subtitle{
+  margin: 0;
+  font-family: var(--fuente-parrafos);    /* Poppins */
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0,0,0,.35);
+  opacity: .95;
+}
+
+@media (min-width: 992px){
+  :root{ --hero-h: 480px; }
+}
