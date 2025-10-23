@@ -18,11 +18,23 @@
 /* ============================= */
 /* ESTILOS GENERALES            */
 /* ============================= */
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {  
   font-family: var(--fuente-parrafos);
   background-color: var(--color-fondo-pagina);
+  height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex:1;
 }
 
 .fade-in {
@@ -818,6 +830,21 @@ a {
   text-align: center;
   color: rgba(61, 46, 37, 0.85);
 }
+
+
+/* ===== ESTILOS CARRITO ==== */
+ .icono-carrito {
+      font-size: 64px;
+      color: #e67e22;
+    }
+  .btn-catalogo {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+  }
+  .btn-catalogo:hover {
+      background-color: #cf711f;
+  }
 
 /* ===== ANIMACIÓN DE SPINNER ===== */
 .spin {
