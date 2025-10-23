@@ -24,6 +24,110 @@ body {
   margin: 0;
   padding: 0;
 }
+#boton-catalogo{
+  background-color: var(--color-hover-icono);
+  border: 0;
+  font-size: 1rem; /* tamaño de texto */
+  padding: 0.75rem 1.5rem; /* espacio interno */
+  color: white;
+  font-family: var(--fuente-parrafos);
+
+  
+}
+.popin{
+  font-family: var(--fuente-parrafos);
+}
+.section-neto{
+background-color: var(--color-fondo-pagina);
+}
+.garamond{
+  font-family: var(--fuente-principal);
+}
+.section2{
+  background-color: white;
+}
+#alma-mexicana{
+  color: white;
+  font-family: var(--fuente-principal);
+  font-size: 4em;
+}
+#p-artesanias{
+  color: white;
+  font-family: var(--fuente-parrafos);
+}
+.hero-neto {
+  height: 60vh; /* ocupa todo el viewport vertical */
+  background-image: url('https://media.moddb.com/images/downloads/1/203/202069/missing_textures.png');
+  background-size: cover; /* recorta sin deformar */
+  background-position: center; /* centra la parte visible */
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+}
+.sectionu{
+  height: 30vh;
+}
+.historias-section {
+  background: #faf6f2;
+}
+
+.custom-img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.btn-custom {
+  background-color: #b67a4f;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.btn-custom:hover {
+  background-color: #8c5a37;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.full-width-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.sectionu{
+  background-color: #D9A679;
+}
+.bg-beige {
+  background-color: var(--color-icono); /* o el color que uses */
+  width: 100vw;              /* fuerza el ancho al viewport completo */
+  margin-left: calc(-50vw + 50%); /* compensa el centrado del container */
+}
+
+#boton-abajo{
+  background-color: var(--color-fondo);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.producto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 .fade-in {
   opacity: 0;
