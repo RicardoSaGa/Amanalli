@@ -373,6 +373,45 @@ nav{
   }
 }
 
+/*------------------------------*/
+/* Pagina envios y devoluciones */
+/*------------------------------*/
+
+#logoeyd {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 100px;
+  margin: 20px;
+
+  
+}
+
+#titleeyd {
+  font-family: var(--fuente-principal);
+  font-size: 3rem;
+  text-align: center;
+  color:#3d2e25;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #c6785e;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    color: #fff;
+}
+
+.accordion-button {
+    background-color: #d9a679;
+    font-family: var(--fuente-parrafos);
+    color:#3d2e25;
+}
+
+.accordion-item{
+  font-family: var(--fuente-parrafos);
+  color: #3d2e25;
+}
+
 /* ============================= */
 /* FOOTER                       */
 /* ============================= */
