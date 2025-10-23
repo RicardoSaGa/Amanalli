@@ -23,7 +23,7 @@ html {
   margin: 0;
 }
 
-body {  
+.body-neto {  
   font-family: var(--fuente-parrafos);
   background-color: var(--color-fondo-pagina);
   height: 100%;
@@ -33,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-main{
+.main-neto{
   flex:1;
 }
 #boton-catalogo{
@@ -67,15 +67,15 @@ background-color: var(--color-fondo-pagina);
   color: white;
   font-family: var(--fuente-parrafos);
 }
-.hero-neto {
+.hero-neto{
   height: 60vh; /* ocupa todo el viewport vertical */
   background-image: url('https://media.moddb.com/images/downloads/1/203/202069/missing_textures.png');
   background-size: cover; /* recorta sin deformar */
   background-position: center; /* centra la parte visible */
   background-repeat: no-repeat;
   position: relative;
-  color: white;
-}
+  color: white;}
+
 .sectionu{
   height: 30vh;
 }
@@ -128,8 +128,8 @@ background-color: var(--color-fondo-pagina);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center;}
+
 
 .producto-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
