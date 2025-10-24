@@ -18,12 +18,146 @@
 /* ============================= */
 /* ESTILOS GENERALES            */
 /* ============================= */
-body {  
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.body-neto {  
   font-family: var(--fuente-parrafos);
   background-color: var(--color-fondo-pagina);
+  height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
+
+.main-neto{
+  flex:1;
+}
+#boton-catalogo{
+  background-color: var(--color-hover-icono);
+  border: 0;
+  font-size: 1rem; /* tamaño de texto */
+  padding: 0.75rem 1.5rem; /* espacio interno */
+  color: white;
+  font-family: var(--fuente-parrafos);
+
+  
+}
+.popin{
+  font-family: var(--fuente-parrafos);
+}
+.section-neto{
+background-color: var(--color-fondo-pagina);
+}
+.garamond{
+  font-family: var(--fuente-principal);
+}
+.section2{
+  background-color: white;
+}
+#alma-mexicana{
+  color: white;
+  font-family: var(--fuente-principal);
+  font-size: 4em;
+}
+#p-artesanias{
+  color: white;
+  font-family: var(--fuente-parrafos);
+}
+
+.hero-neto {
+  min-height: 60vh; 
+  width: 100vw; 
+  background-image: url('https://images.unsplash.com/photo-1742314841957-65a5bd7fa1f8?...');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* mejora legibilidad del texto */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+
+.card-img-top {
+  height: 350px; /* ajusta según tu diseño */
+  object-fit: cover; /* recorta sin deformar */
+}
+
+
+.sectionu{
+  height: 30vh;
+}
+.historias-section {
+  background: #faf6f2;
+}
+
+.custom-img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.btn-custom {
+  background-color: #b67a4f;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.btn-custom:hover {
+  background-color: #8c5a37;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.full-width-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.sectionu{
+  background-color: #D9A679;
+}
+.bg-beige {
+  background-color: var(--color-icono); /* o el color que uses */
+  width: 100vw;              /* fuerza el ancho al viewport completo */
+  margin-left: calc(-50vw + 50%); /* compensa el centrado del container */
+}
+
+#boton-abajo{
+  background-color: var(--color-fondo);
+}
+
+
+
+.producto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* permite que la tarjeta se expanda dentro de su columna */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 .fade-in {
   opacity: 0;
@@ -37,6 +171,55 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ============================= */
+/* SECCIÓN NAVBAR */
+/* ============================= */
+nav{
+    background-color: #f5efe6;
+    color: #3d2e25;
+    width: 100%;
+    font-weight: 500;
+}
+.logoNavbar{
+    width: 60px;
+	height: auto;
+}
+.imgNavbar{
+    width: 25px;
+    height: auto;
+}
+.tituloheader {
+    display: inline-block;
+    font-family: "Cormorant Garamond", serif;
+	color: #3d2e25;
+	margin-top: 15px;
+	font-size: 20px;
+	font: bold;
+}
+.navbar-nav .nav-link:hover,
+.navbar h2:hover {
+    color: #c4785e;
+}
+.paginaActiva{
+    color: #c4785e!important;
+}
+.hoverPerfil img:hover {
+    content: url('./pictures/perfil_de_usuario_light.png');
+}
+.hoverCarrito img:hover {
+    content: url('./pictures/carrito_de_productos_light.png');
+}
+
+/* Mobile vs Desktop responsividad*/
+#usuarioMovil { display: flex; }
+#usuarioDesktop { display: none; }
+
+@media (min-width: 1200px) {
+    #usuarioMovil { display: none; }
+    #usuarioDesktop { display: flex; }
+}
+
 
 /* ============================= */
 /* SECCIÓN MISIÓN, VISIÓN, VALORES */
@@ -89,6 +272,40 @@ body {
 /* ============================= */
 /* SECCIÓN HISTORIA             */
 /* ============================= */
+
+.compromiso-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.compromiso-container h7 {
+  font-size: 1.2rem;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.barra-lateral {
+  width: 10px;
+  min-height: 80px; /* fuerza que se vea aunque esté vacío */
+  background-color: #c4785e;
+  border-radius: 4px;
+}
+
+.compromiso-item {
+  min-height: 60px; /* asegura que el contenedor tenga altura */
+}
+
+.impacto-container {
+  background-color: #D9A679;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
 .historia-container {
   background-color: white;
   border-radius: 10px;
@@ -104,13 +321,29 @@ body {
   gap: 2rem;
 }
 
+.compromiso-fila {
+  margin-bottom: 2.5rem 2.5rem, 2.5rem, 2.5rem; /* equivalente a mb-4 */
+}
+
+
 .texto {
   flex: 1 1 100%;
   padding: 20px;
   box-sizing: border-box;
 }
 
+.texto h1 {
+  font-size: 3rem;
+}
+
 .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+}
+
+.texto h5 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--color-fondo);
@@ -274,6 +507,45 @@ body {
   }
 }
 
+/*------------------------------*/
+/* Pagina envios y devoluciones */
+/*------------------------------*/
+
+#logoeyd {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 100px;
+  margin: 20px;
+
+  
+}
+
+#titleeyd {
+  font-family: var(--fuente-principal);
+  font-size: 3rem;
+  text-align: center;
+  color:#3d2e25;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #c6785e;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    color: #fff;
+}
+
+.accordion-button {
+    background-color: #d9a679;
+    font-family: var(--fuente-parrafos);
+    color:#3d2e25;
+}
+
+.accordion-item{
+  font-family: var(--fuente-parrafos);
+  color: #3d2e25;
+}
+
 /* ============================= */
 /* FOOTER                       */
 /* ============================= */
@@ -352,4 +624,393 @@ a {
   margin: 0 auto;
 }
 
+/* ============================= */
+/* HERO: ACERCA DE AMANALLI      */
+/* ============================= */
+:root{
+  --hero-h: 420px; /* ajusta a 480px si quieres más alto en desktop */
+}
 
+.hero-amanalli{
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: var(--hero-h);
+  overflow: hidden;
+  background: var(--color-fondo-pagina);
+  isolation: isolate;         /* asegura overlay por encima de la imagen */
+  text-align: center;
+  color: #fff;
+  font-family: var(--fuente-parrafos);
+}
+
+.hero-amanalli__bg{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  filter: saturate(.9) contrast(.95);
+  z-index: 0;
+}
+
+.hero-amanalli__overlay{
+  position: absolute; inset: 0;
+  background: rgba(61,46,37,.62); /* tu --color-fondo con ~62% de opacidad */
+  z-index: 1;
+}
+
+.hero-amanalli__content{
+  position: relative; z-index: 2;
+  padding-inline: 1rem;
+  max-width: 70ch;
+}
+
+.hero-amanalli__title{
+  margin: 0 0 .35em 0;
+  font-family: var(--fuente-principal);   /* Cormorant Garamond */
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);  /* look de tu captura */
+  line-height: 1.05;
+  letter-spacing: .4px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+
+.hero-amanalli__subtitle{
+  margin: 0;
+  font-family: var(--fuente-parrafos);    /* Poppins */
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0,0,0,.35);
+  opacity: .95;
+}
+
+@media (min-width: 992px){
+  :root{ --hero-h: 480px; }
+}
+/* ============================= */
+/* SECCIÓN CONTACTO (DISEÑO FINAL AMANALLI) */
+/* ============================= */
+
+.contacto-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.contacto-container h1 {
+  font-family: var(--fuente-principal);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  color: var(--color-fondo);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contacto-container p.subtitulo {
+  text-align: center;
+  font-family: var(--fuente-parrafos);
+  font-size: 1.1rem;
+  color: rgba(61, 46, 37, 0.8);
+  margin-bottom: 40px;
+}
+
+/* ===== GRID GENERAL ===== */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 992px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== TARJETAS ===== */
+.contacto-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(61, 46, 37, 0.1);
+  padding: 30px;
+}
+
+/* ===== FORMULARIO ===== */
+.contacto-form h2 {
+  font-family: var(--fuente-principal);
+  font-size: 1.3rem;
+  color: var(--color-fondo);
+  margin-bottom: 1rem;
+}
+
+.contacto-form label {
+  font-family: var(--fuente-parrafos);
+  font-weight: 500;
+  color: var(--color-fondo);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  background: #fffaf5;
+  border: 1.5px solid #eddcca;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: var(--fuente-parrafos);
+  font-size: 1rem;
+  color: var(--color-fondo);
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: var(--color-hover-enlace);
+  box-shadow: 0 0 0 3px rgba(198, 120, 94, 0.2);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.contacto-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===== BOTÓN ENVIAR ===== */
+.btn-contacto {
+  width: 100%;
+  background-color: var(--color-hover-enlace);
+  color: white;
+  font-family: var(--fuente-parrafos);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.05s ease;
+}
+
+.btn-contacto:hover {
+  filter: brightness(0.95);
+}
+
+.btn-contacto:active {
+  transform: translateY(1px);
+}
+
+.btn-contacto svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== INFO DE CONTACTO ===== */
+.contacto-info h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contacto-icono {
+  background-color: var(--color-icono);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.contacto-item:hover .contacto-icono {
+  background-color: var(--color-hover-icono);
+}
+
+.contacto-item div h4 {
+  font-family: var(--fuente-principal);
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--color-fondo);
+}
+
+.contacto-item div p {
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.8);
+  margin: 2px 0 0;
+  font-size: 0.95rem;
+}
+
+/* ===== PREGUNTAS FRECUENTES ===== */
+.faq-card {
+  background-color: #ead7c3;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 24px;
+}
+
+.faq-card h3 {
+  font-family: var(--fuente-principal);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: var(--color-fondo);
+}
+
+.faq-card h4 {
+  font-family: var(--fuente-principal);
+  font-size: 1.05rem;
+  color: var(--color-fondo);
+  margin: 14px 0 4px;
+}
+
+.faq-card p {
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ===== HORARIO ===== */
+.horario-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(61, 46, 37, 0.1);
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.horario-card h3 {
+  font-family: var(--fuente-principal);
+  color: var(--color-fondo);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.horario-linea {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  font-family: var(--fuente-parrafos);
+  color: rgba(61, 46, 37, 0.85);
+  font-size: 0.95rem;
+}
+
+.horario-linea:last-child {
+  border-bottom: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .faq-card,
+  .horario-card {
+    margin-top: 20px;
+  }
+}
+
+/* ============================= */
+/* VALIDACIÓN FORMULARIO CONTACTO */
+/* ============================= */
+
+.input-error {
+  border-color: #b00020 !important;
+  background-color: #fff4f4;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input-valid {
+  border-color: #2e7d32 !important;
+  background-color: #f7fff8;
+}
+
+.error-msg {
+  color: #b00020;
+  font-family: var(--fuente-parrafos);
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* ===== CONTADOR DE CARACTERES (DENTRO DEL TEXTAREA) ===== */
+.textarea-wrapper{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.textarea-wrapper textarea{
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  /* espacio para el contador y para no chocar con el “resize” */
+  padding-right: 64px !important;
+  padding-bottom: 28px !important;
+}
+
+/* el contador flota dentro del cuadro */
+.char-counter{
+  position: absolute;
+  right: 16px;       /* separa del borde derecho */
+  bottom: 24px;      /* súbelo para evitar el “resize handle” */
+  z-index: 5;        /* por encima del textarea */
+  font-size: .8rem;
+  font-family: var(--fuente-parrafos);
+  color: rgba(61,46,37,.55);
+  pointer-events: none;
+  user-select: none;
+  background: #fffaf5;   /* mismo fondo del campo */
+  padding: 0 6px;        /* pequeño pill para legibilidad */
+  border-radius: 6px;
+  line-height: 1.1;
+}
+
+.char-counter.over-limit{
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* ===== ESTADO DE ENVÍO ===== */
+.contacto__status {
+  margin-top: 10px;
+  font-family: var(--fuente-parrafos);
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgba(61, 46, 37, 0.85);
+}
+
+
+/* ===== ESTILOS CARRITO ==== */
+ .icono-carrito {
+      font-size: 64px;
+      color: #e67e22;
+    }
+  .btn-catalogo {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+  }
+  .btn-catalogo:hover {
+      background-color: #cf711f;
+  }
+
+/* ===== ANIMACIÓN DE SPINNER ===== */
+.spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

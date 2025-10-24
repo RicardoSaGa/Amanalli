@@ -1,0 +1,227 @@
+/* ============================= */
+/* VARIABLES GLOBALES EN :ROOT  */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-fondo: #3d2e25;
+    --color-hover-enlace: #c6785e;
+    --color-icono: #d9a679;
+    --color-hover-icono: #c6785e;
+    --color-text: #e3ddd3;
+    --color-fondo-pagina: #f5efe6;
+
+    --fuente-principal: 'Cormorant Garamond', serif;
+    --fuente-parrafos: 'Poppins', sans-serif;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES            */
+/* ============================= */
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: var(--color-fondo-pagina);
+    color: #3d2e25;
+}
+
+.garamond{
+    font-family: var(--fuente-principal);
+}
+.popin{
+    font-family: var(--fuente-parrafos);
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================= */
+/* SECCIÓN NAVBAR */
+/* ============================= */
+
+nav{
+    background-color: #f5efe6;
+    color: #3d2e25;
+    width: 100%;
+    font-weight: 500;
+}
+.logoNavbar{
+    width: 60px;
+	height: auto;
+}
+.imgNavbar{
+    width: 25px;
+    height: auto;
+}
+.tituloheader {
+    display: inline-block;
+    font-family: "Cormorant Garamond", serif;
+	color: #3d2e25;
+	margin-top: 15px;
+	font-size: 20px;
+}
+.navbar-nav .nav-link:hover,
+.navbar h2:hover {
+    color: #c4785e;
+}
+.paginaActiva{
+    color: #c4785e!important;
+}
+.perfilActivo{
+    content: url('../Pictures/perfil_de_usuario_light.png');
+}
+.carritoActivo{
+    content: url('../Pictures/carrito_de_productos_light.png');
+}
+.hoverPerfil img:hover {
+    content: url('../Pictures/perfil_de_usuario_light.png');
+}
+.hoverCarrito img:hover {
+    content: url('../Pictures/carrito_de_productos_light.png');
+}
+
+
+/* Mobile vs Desktop responsividad*/
+#usuarioMovil { display: flex; }
+#usuarioDesktop { display: none; }
+
+@media (min-width: 1200px) {
+    #usuarioMovil { display: none; }
+    #usuarioDesktop { display: flex; }
+}
+
+/* Sección política de privacidad */
+  
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imagen-centrada {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px; 
+  height: 200px; 
+}
+
+
+.politica-container {
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 60px auto 3rem auto;
+  max-width: 1000px;
+}
+
+.titulo-principal {
+    font-family: 'Cormorant';
+    font-size: 50px;
+    margin-top: 30px;
+
+}
+
+.texto-secun{
+    font-family: 'Cormorant';
+    font-size: 20px;
+}
+
+.texto-ter{
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
+
+
+/* ============================= */
+/* FOOTER                       */
+/* ============================= */
+
+a {
+    transition: color 0.3s ease;
+}
+
+.footer {
+    background-color: var(--color-fondo);
+}
+
+.brand {
+    font-size: 2rem;
+    color: var(--color-icono);
+    font-weight: bold;
+    font-family: var(--fuente-principal);
+}
+
+.tagline {
+    font-family: var(--fuente-parrafos);
+    font-size: 1rem;
+    color: white; 
+}
+
+.section-title {
+    color: var(--color-icono);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--fuente-principal);
+}
+
+.footer-link {
+    font-family: var(--fuente-parrafos);
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-hover-enlace);
+}
+
+.social-icon {
+    background-color: var(--color-icono);
+    color: var(--color-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    background-color: var(--color-hover-icono);
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 1rem;
+    font-family: var(--fuente-parrafos);
+    color: var(--color-text);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
