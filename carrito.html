@@ -1,17 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanalli</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito - Amanalli</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,16 +14,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
-
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- ICO -->
-  <link rel="icon" href="./Pictures/logo_Amanalli.png">
 </head>
-<body style="background-color: var(--color-fondo-pagina);" class="body-neto">
+<body>
 
-    <!-- NAVBAR -->
+ <!-- NAVBAR -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
       <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -115,114 +103,17 @@
     </nav>
   </header>
 
-<!----------------------Aqui empieza el codigo de neto :D --------------------------------------->
-<section class="py-5 hero-neto">
-    <div class="overlay">
-      <h1 id="alma-mexicana">Compra lo hecho con alma mexicana</h1>
-      <p id="p-artesanias">Artesanías auténticas creadas por manos expertas</p>
-      <a href="#catalogo" class="btn btn-light " id="boton-catalogo">Ver catálogo →</a>
-      </div>
-      </section>
-
-  <main class="container section-neto main-neto">
-
-  <section class="py-0 bg-light section-neto" >
-  <div class="container section-neto py-5" >
-    <h2 class="mb-4 text-center garamond">Productos Destacados</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card producto-card">
-          <img src="https://design-assets.adobeprojectm.com/content/download/express/public/urn:aaid:sc:VA6C2:5d4958c3-cc9d-5bac-ae61-dda83f8c3231/component?assetType=TEMPLATE&etag=44e0f1bab54448e98f8ac6d3e69c47b7&revision=30117e04-48e0-425d-9991-a0c5f3139014&component_id=c95cd7a0-3745-4c4f-9d3e-24ea304420e7" class="card-img-top" alt="Vasija de Barro">
-          <div class="card-body">
-            <h5 class="card-title garamond">Vasija de Barro</h5>
-            <p class="card-text popin">Mario González · Oaxaca</p>
-            <p class="card-text fw-bold">$450</p>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
+  <!-- 🛒 CONTENIDO PRINCIPAL -->
+  <main class="text-center py-5">
+    <div class="container">
+        <div class="icono-carrito mb-4">
+        🛍️
         </div>
-      </div>
-      <!-- Repite para los otros dos productos -->
-       <div class="col-md-4">
-        <div class="card producto-card">
-          <img src="https://img.freepik.com/vector-gratis/meme-cuadrado-gato-vibrante-simple_742173-4493.jpg?semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Vasija de Barro">
-          <div class="card-body">
-            <h5 class="card-title garamond">Vasija de Barro</h5>
-            <p class="card-text popin">Mario González · Oaxaca</p>
-            <p class="card-text fw-bold">$450</p>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card producto-card">
-          <img src="https://en.meming.world/images/en/8/81/Stonks.jpg" class="card-img-top" alt="Vasija de Barro">
-          <div class="card-body">
-            <h5 class="card-title garamond">Vasija de Barro</h5>
-            <p class="card-text popin">Mario González · Oaxaca</p>
-            <p class="card-text fw-bold">$450</p>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-      
+        <h2 class="mb-3">Tu carrito está vacío</h2>
+        <p class="mb-4">Explora nuestro catálogo y encuentra artesanías únicas</p>
+        <a href="#" class="btn btn-catalogo px-4 py-2">Ver catálogo</a>
     </div>
-  </div>
-</section>
-
-
-
-  <section class="full-width-bg py-5 bg-white ">
-  <div class="container-fluid px-5">
-
-    <!-- Título de sección -->
-    <h3 class="text-center mb-5 display-7 fw-semibold garamond">
-      Historias de Artesanos
-    </h3>
-
-    <div class="row align-items-center">
-
-      <!-- Imagen -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="https://m.media-amazon.com/images/I/813kqvYoRfL.png"
-          class="img-fluid rounded-3 shadow-lg custom-img"
-          alt="Manos trabajando el barro">
-      </div>
-
-      <!-- Texto -->
-      <div class="col-md-5 offset-md-1">
-        <h3 class="mb-4 fw-semibold garamond">Cada pieza cuenta una historia</h3>
-        <p class="mb-4 fs-6 text-muted popin">
-          Detrás de cada artesanía hay un artesano que ha dedicado años a perfeccionar su oficio.
-          Conoce sus historias, su inspiración y el legado cultural que preservan con cada creación.
-        </p>
-        <a href="#historias" class="btn btn-custom popin">
-          Leer más historias →
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-  <section class="py-5 bg-beige text-center sectionu ">
-  <div class="container-fluid">
-    <h2 class="mb-3 garamond">Descubre nuestra colección completa</h2>
-    <p class="lead mb-4 popin">
-      Explora cientos de piezas únicas creadas por artesanos de todo México
-    </p>
-    <a href="#catalogo" class="btn btn-dark btn-lg" id="boton-abajo">Ver catálogo completo</a>
-  </div>
-</section>
-
-</main>
-<!----------------------Aqui termina el codigo de neto :D --------------------------------------->
-
-  <!-- Contenido de prueba -->
-  
+  </main>
 
   <!-- Footer -->
   <footer class="footer text-white pt-5 pb-3">
@@ -237,7 +128,7 @@
           <ul class="list-unstyled">
             <li><a href="#" class="footer-link">Política de privacidad</a></li>
             <li><a href="#" class="footer-link">Términos y condiciones</a></li>
-            <li><a href="./envydev.html" class="footer-link">Envíos y devoluciones</a></li>
+            <li><a href="#" class="footer-link">Envíos y devoluciones</a></li>
           </ul>
         </div>
         <div class="col-md-4 mb-4">
@@ -259,23 +150,7 @@
     </div>
   </footer>
 
-  <!-- Boostrap y script-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
-  
-  
-  
-
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
 </body>
-
 </html>

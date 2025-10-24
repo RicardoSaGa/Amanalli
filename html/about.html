@@ -14,45 +14,47 @@
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
 
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="../css/about.css">
 
   <!-- ICO -->
-  <link rel="icon" href="./Pictures/logo_Amanalli.png">
+  <link rel="icon" href="../Pictures/logo_Amanalli.png">
+  
 </head>
 
-<body style="background-color: var(--color-fondo-pagina);">
+<body>
 
   <!-- NAVBAR -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
       <div class="container-fluid d-flex align-items-center justify-content-between">
 
-        <!-- LOGO -->
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-          <img src="./Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
+          <!-- LOGO -->
+          <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="../Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
           <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
-        </a>
+          </a>
 
-        <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
-        <div class="d-flex align-items-center gap-3">
+          <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
+          <div class="d-flex align-items-center gap-3">
 
           <!-- PERFIL Y CARRITO (display móvil) -->
           <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center hoverPerfil" href="carrito.html">
-                <img src="./Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center hoverCarrito" href="carrito.html">
-                <img src="./Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
-              </a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                  <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                    <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+                </a>
+              </li>
+            </ul>
 
           <!-- BOTÓN HAMBURGUESA -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
@@ -65,19 +67,22 @@
         <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
           <ul class="navbar-nav text-center ">
             <li class="nav-item mx-3">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="#">Catálogo</a>
+              <a class="nav-link" href="./catalogo.html">Catálogo</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link paginaActiva" href="about.html">Acerca de</a>
+              <a class="nav-link paginaActiva" href="./about.html">Acerca de</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="./blog.html">Blog</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a>
             </li>
           </ul>
         </div>
@@ -85,13 +90,13 @@
         <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
         <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center hoverPerfil" href="#">
-              <img src="./Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+            <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+              <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center hoverCarrito" href="carrito.html">
-              <img src="./Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+            <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+              <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
             </a>
           </li>
         </ul>
@@ -100,20 +105,22 @@
       <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
       <div class="collapse d-xl-none " id="menuMobile">
         <ul class="navbar-nav py-3 px-3">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
-          <li class="nav-item"><a class="nav-link paginaActiva" href="about.html">Acerca de</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item paginaActiva"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link paginaActiva" href="./about.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
+
   <section class="hero-amanalli" aria-label="Acerca de Amanalli">
   <img class="hero-amanalli__bg"
-       src="https://images.unsplash.com/photo-1738322212738-40d684b36beb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
-       alt="Taller artesanal">
+      src="https://images.unsplash.com/photo-1738322212738-40d684b36beb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+      alt="Taller artesanal">
   <div class="hero-amanalli__overlay"></div>
 
   <div class="hero-amanalli__content">
@@ -128,7 +135,7 @@
       <!-- Misión -->
       <div class="col">
         <div class="card-mvv">
-          <img id="imgmvv" src="./Pictures/Mision.png" class="rounded mx-auto d-block" alt="Misión">
+          <img id="imgmvv" src="../Pictures/Mision.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Misión</h5>
             <p id="txtmvv" class="text-center">Preservar y promover el arte ancestral mexicano,
@@ -141,7 +148,7 @@
       <!-- Visión -->
       <div class="col">
         <div class="card-mvv">
-          <img id="imgmvv" src="./Pictures/Vision.png" class="rounded mx-auto d-block" alt="Misión">
+          <img id="imgmvv" src="../Pictures/Vision.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Visión</h5>
             <p id="txtmvv" class="text-center">Ser la plataforma líder en México que conecta artesanos
@@ -154,7 +161,7 @@
       <!-- Valores -->
       <div class="col">
         <div class="card-mvv">
-          <img id="imgmvv" src="./Pictures/Valores.png" class="rounded mx-auto d-block" alt="Misión">
+          <img id="imgmvv" src="../Pictures/Valores.png" class="rounded mx-auto d-block" alt="Misión">
           <div class="card-body">
             <h5 id="fontmvv" class="text-center">Valores</h5>
             <p id="txtmvv" class="text-center">Autenticidad, respeto, comercio justo, sostenibilidad y
@@ -182,7 +189,7 @@
           conviertes en parte de esta historia.</p>
       </div>
       <div class="col-md-6 imagen">
-        <img src="./Pictures/Bolsa.jpg" alt="Manipulando barro" class="img-fluid rounded">
+        <img src="../Pictures/Bolsa.jpg" alt="Manipulando barro" class="img-fluid rounded">
       </div>
     </div>
   </section>
@@ -200,7 +207,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/Cam.jpeg" alt="Camila de la Piedra Méndez" class="img-fluid rounded" />
+                  <img src="../Pictures/Cam.jpeg" alt="Camila de la Piedra Méndez" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Camila de la Piedra Méndez</h4>
@@ -217,7 +224,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/Jose.jpg" alt="José Sánchez Reyes" class="img-fluid rounded" />
+                  <img src="../pictures/Jose.jpg" alt="José Sánchez Reyes" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>José Sánchez Reyes</h4>
@@ -233,7 +240,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/Fer.jpeg" alt="Maria Fernanda Juarez Peña" class="img-fluid rounded" />
+                  <img src="../Pictures/Fer.jpeg" alt="Maria Fernanda Juarez Peña" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Maria Fernanda Juarez Peña</h4>
@@ -250,7 +257,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/neto.jpeg" alt="Ernesto González Salazar" class="img-fluid rounded" />
+                  <img src="../Pictures/neto.jpeg" alt="Ernesto González Salazar" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Ernesto González Salazar</h4>
@@ -267,7 +274,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./Pictures/Noel.jpg" alt="Noel Alejandro Banda Beltran" class="img-fluid rounded" />
+                  <img src="../Pictures/Noel.jpg" alt="Noel Alejandro Banda Beltran" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Noel Alejandro Banda Beltran</h4>
@@ -284,7 +291,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./Pictures/xime.jpg" alt="Ximena Amahirany Martinez Maciel" class="img-fluid rounded" />
+                  <img src="../Pictures/xime.jpg" alt="Ximena Amahirany Martinez Maciel" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Ximena Amahirany Martinez Maciel</h4>
@@ -302,7 +309,7 @@
             <div class="equipo-card container">
               <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 text-center">
-                  <img src="./pictures/rick.jpeg" alt="Juan Ricardo Saucedo Gallegos" class="img-fluid rounded" />
+                  <img src="../Pictures/rick.jpeg" alt="Juan Ricardo Saucedo Gallegos" class="img-fluid rounded" />
                 </div>
                 <div class="col-md-8 equipo-texto">
                   <h4>Juan Ricardo Saucedo Gallegos</h4>
@@ -334,7 +341,7 @@
 
   <!-- Sección Nuestro Impacto -->
   <section class="impacto-container texto container my-5 fade-in">
-     <h2 class="text-center">Nuestro Impacto</h2>
+    <h2 class="text-center">Nuestro Impacto</h2>
     <div class="row text-center">
       <!--- Columna 1-->
       <div class="col-md-3">
@@ -425,8 +432,8 @@
         <div class="col-md-4 mb-4">
           <h5 class="section-title">Enlaces rápidos</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">Política de privacidad</a></li>
-            <li><a href="#" class="footer-link">Términos y condiciones</a></li>
+            <li><a href="./politica.html" class="footer-link">Política de privacidad</a></li>
+            <li><a href="./terminos-y-condiciones.html" class="footer-link">Términos y condiciones</a></li>
             <li><a href="./envydev.html" class="footer-link">Envíos y devoluciones</a></li>
           </ul>
         </div>
@@ -448,10 +455,11 @@
       </div>
     </div>
   </footer>
+    
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

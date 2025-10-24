@@ -1,0 +1,22 @@
+
+/* ===== ESTILOS CARRITO ==== */
+.icono-carrito {
+    font-size: 64px;
+    color: #e67e22;
+}
+.btn-catalogo {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+}
+.btn-catalogo:hover {
+    background-color: #cf711f;
+}
+
+/* ===== ANIMACIÓN DE SPINNER ===== */
+.spin {
+animation: spin 1s linear infinite;
+}
+@keyframes spin {
+to { transform: rotate(360deg); }
+}
