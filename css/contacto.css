@@ -1,0 +1,305 @@
+/* ============================= */
+/* SECCIÓN CONTACTO (DISEÑO FINAL AMANALLI) */
+/* ============================= */
+
+.contacto-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 20px 80px;
+}
+
+.contacto-container h1 {
+    font-family: var(--fuente-principal);
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    color: var(--color-fondo);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacto-container p.subtitulo {
+    text-align: center;
+    font-family: var(--fuente-parrafos);
+    font-size: 1.1rem;
+    color: rgba(61, 46, 37, 0.8);
+    margin-bottom: 40px;
+}
+
+/* ===== GRID GENERAL ===== */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+@media (max-width: 992px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== TARJETAS ===== */
+.contacto-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(61, 46, 37, 0.1);
+    padding: 30px;
+}
+
+/* ===== FORMULARIO ===== */
+.contacto-form h2 {
+    font-family: var(--fuente-principal);
+    font-size: 1.3rem;
+    color: var(--color-fondo);
+    margin-bottom: 1rem;
+}
+
+.contacto-form label {
+    font-family: var(--fuente-parrafos);
+    font-weight: 500;
+    color: var(--color-fondo);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    background: #fffaf5;
+    border: 1.5px solid #eddcca;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-family: var(--fuente-parrafos);
+    font-size: 1rem;
+    color: var(--color-fondo);
+    transition: all 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: var(--color-hover-enlace);
+    box-shadow: 0 0 0 3px rgba(198, 120, 94, 0.2);
+    outline: none;
+    background-color: #ffffff;
+}
+
+.contacto-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* ===== BOTÓN ENVIAR ===== */
+.btn-contacto {
+    width: 100%;
+    background-color: var(--color-hover-enlace);
+    color: white;
+    font-family: var(--fuente-parrafos);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.05s ease;
+}
+
+.btn-contacto:hover {
+    filter: brightness(0.95);
+}
+
+.btn-contacto:active {
+    transform: translateY(1px);
+}
+
+.btn-contacto svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===== INFO DE CONTACTO ===== */
+.contacto-info h2 {
+    font-family: var(--fuente-principal);
+    color: var(--color-fondo);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contacto-icono {
+    background-color: var(--color-icono);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-item:hover .contacto-icono {
+    background-color: var(--color-hover-icono);
+}
+
+.contacto-item div h4 {
+    font-family: var(--fuente-principal);
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--color-fondo);
+}
+
+.contacto-item div p {
+    font-family: var(--fuente-parrafos);
+    color: rgba(61, 46, 37, 0.8);
+    margin: 2px 0 0;
+    font-size: 0.95rem;
+}
+
+/* ===== PREGUNTAS FRECUENTES ===== */
+.faq-card {
+    background-color: #ead7c3;
+    border-radius: 12px;
+    padding: 22px;
+    margin-top: 24px;
+}
+
+.faq-card h3 {
+    font-family: var(--fuente-principal);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--color-fondo);
+}
+
+.faq-card h4 {
+    font-family: var(--fuente-principal);
+    font-size: 1.05rem;
+    color: var(--color-fondo);
+    margin: 14px 0 4px;
+}
+
+.faq-card p {
+    font-family: var(--fuente-parrafos);
+    color: rgba(61, 46, 37, 0.8);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ===== HORARIO ===== */
+.horario-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(61, 46, 37, 0.1);
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.horario-card h3 {
+    font-family: var(--fuente-principal);
+    color: var(--color-fondo);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.horario-linea {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    font-family: var(--fuente-parrafos);
+    color: rgba(61, 46, 37, 0.85);
+    font-size: 0.95rem;
+}
+
+.horario-linea:last-child {
+    border-bottom: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .faq-card,
+    .horario-card {
+        margin-top: 20px;
+    }
+}
+
+/* ============================= */
+/* VALIDACIÓN FORMULARIO CONTACTO */
+/* ============================= */
+
+.input-error {
+    border-color: #b00020 !important;
+    background-color: #fff4f4;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.input-valid {
+    border-color: #2e7d32 !important;
+    background-color: #f7fff8;
+}
+
+.error-msg {
+    color: #b00020;
+    font-family: var(--fuente-parrafos);
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* ===== CONTADOR DE CARACTERES (DENTRO DEL TEXTAREA) ===== */
+.textarea-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.textarea-wrapper textarea{
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    /* espacio para el contador y para no chocar con el “resize” */
+    padding-right: 64px !important;
+    padding-bottom: 28px !important;
+}
+
+/* el contador flota dentro del cuadro */
+.char-counter{
+    position: absolute;
+    right: 16px;       /* separa del borde derecho */
+    bottom: 24px;      /* súbelo para evitar el “resize handle” */
+    z-index: 5;        /* por encima del textarea */
+    font-size: .8rem;
+    font-family: var(--fuente-parrafos);
+    color: rgba(61,46,37,.55);
+    pointer-events: none;
+    user-select: none;
+    background: #fffaf5;   /* mismo fondo del campo */
+    padding: 0 6px;        /* pequeño pill para legibilidad */
+    border-radius: 6px;
+    line-height: 1.1;
+}
+
+.char-counter.over-limit{
+    color: #b00020;
+    font-weight: 600;
+}
+
+/* ===== ESTADO DE ENVÍO ===== */
+.contacto__status {
+    margin-top: 10px;
+    font-family: var(--fuente-parrafos);
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(61, 46, 37, 0.85);
+}
+
