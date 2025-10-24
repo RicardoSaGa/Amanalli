@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanalli</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ICO -->
+  <link rel="icon" href="./Pictures/logo_Amanalli.png">
+</head>
+<body style="background-color: var(--color-fondo-pagina);"">
+
+  <!-- NAVBAR -->
+  <header class="sticky-top">
+      <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+
+          <!-- LOGO -->
+          <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="../Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
+          <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
+          </a>
+
+          <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
+          <div class="d-flex align-items-center gap-3">
+
+          <!-- PERFIL Y CARRITO (display móvil) -->
+          <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
+              <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                  <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+              </a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                  <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+              </a>
+              </li>
+          </ul>
+
+          <!-- BOTÓN HAMBURGUESA -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          </div>
+
+          <!-- LINKS DEL MENÚ (desktop / display de computadora)-->
+          <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
+          <ul class="navbar-nav text-center ">
+              <li class="nav-item mx-3">
+              <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item mx-3">
+              <a class="nav-link" href="./catalogo.html">Catálogo</a>
+              </li>
+              <li class="nav-item mx-3">
+              <a class="nav-link" href="./about.html">Acerca de</a>
+              </li>
+              <li class="nav-item mx-3">
+              <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+              <li class="nav-item mx-3">
+              <a class="nav-link paginaActiva" href="./contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item mx-3">
+              <a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a>
+              </li>
+          </ul>
+          </div>
+
+          <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
+          <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
+          <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+              <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+              <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+              </a>
+          </li>
+          </ul>
+      </div>
+
+      <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
+      <div class="collapse d-xl-none " id="menuMobile">
+          <ul class="navbar-nav py-3 px-3">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item paginaActiva"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link paginaActiva" href="./contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a></li>
+          </ul>
+      </div>
+      </nav>
+  </header>
+
+  <!-- Envios y Devoluciones -->
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh;">
+    <img id="logoeyd" src="../Pictures/logo_Amanalli.png" alt="logoama">
+    <h2 id="titleeyd">Envíos y Devoluciones</h2>
+  </div>
+   <div>
+    <p class="text-center" class="texto" >En Amanalli, nos esforzamos por llevar hasta tu hogar piezas únicas 
+      elaboradas por artesanos de distintas regiones de México. Cada pedido es preparado con cuidado y dedicación 
+      para garantizar que recibas un producto auténtico y en perfecto estado. Si por alguna razón necesitas hacer 
+      una devolución o reportar un inconveniente, nuestro equipo estará disponible para apoyarte en todo momento.</p>
+   <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button 
+        class="accordion-button collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseOne" 
+        aria-expanded="false" 
+        aria-controls="collapseOne">
+        Envíos
+      </button>
+    </h2>
+    <div 
+      id="collapseOne" 
+      class="accordion-collapse collapse" 
+      aria-labelledby="headingOne" 
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          <strong>Los envíos se realizan en un periodo de entre 5 y 7 días hábiles </strong>, dependiendo del estado de destino y 
+          la disponibilidad del producto. El costo de envío puede variar según el tamaño, peso y lugar de entrega. 
+          Todos los pedidos incluyen un número de guía para rastrear tu paquete a través del sitio web de la 
+          paquetería correspondiente.
+          Si requieres un envío urgente o una cotización especial, puedes comunicarte con nosotros 
+          por correo electrónico a <strong>contactoamanalli@gmail.com</strong> o por WhatsApp al <strong>+52 81 2443 0038</strong>, 
+          y con gusto te ayudaremos a encontrar la mejor opción. Amanalli no se hace responsable 
+          por retrasos ocasionados por la empresa de mensajería, errores en la dirección proporcionada o por la falta de alguien que reciba el paquete en el domicilio. Sin embargo, te acompañaremos durante el proceso para resolver cualquier incidencia que pudiera presentarse.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button 
+        class="accordion-button collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseTwo" 
+        aria-expanded="false" 
+        aria-controls="collapseTwo">
+        Cambios
+      </button>
+    </h2>
+    <div 
+      id="collapseTwo" 
+      class="accordion-collapse collapse" 
+      aria-labelledby="headingTwo" 
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+         En Amanalli, queremos que quedes completamente satisfecho con tu compra. Si por alguna razón 
+         deseas cambiar un producto, la forma más rápida y sencilla es <strong>realizar la devolución del artículo 
+         original</strong> y, una vez que esta sea aceptada, efectuar una nueva compra del producto que desees. De esta 
+         manera aseguramos que el nuevo pedido esté disponible y listo para enviarse sin demoras. Para solicitar 
+         un cambio, <strong> el producto debe estar en las mismas condiciones en que lo recibiste: sin usar, con sus etiquetas 
+         y en su empaque original. Además, deberás contar con tu recibo o comprobante de compra.</strong> 
+         Nuestro equipo estará disponible para acompañarte durante el proceso y garantizar que tu experiencia 
+         de cambio sea ágil y satisfactoria. Puedes contactarnos a través de <strong>contactoamanalli@gmail.com</strong> o por WhatsApp
+         al <strong>+52 81 2443 0038</strong> para recibir asistencia personalizada.
+     </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button 
+        class="accordion-button collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#collapseThree" 
+        aria-expanded="false" 
+        aria-controls="collapseThree">
+        Devoluciones
+      </button>
+    </h2>
+    <div 
+      id="collapseThree" 
+      class="accordion-collapse collapse" 
+      aria-labelledby="headingThree" 
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        En Amanalli, cada pieza es elaborada de forma artesanal, por lo que puede presentar ligeras variaciones 
+        en color, textura o forma. Estas diferencias no se consideran defectos, sino parte de la autenticidad y 
+        el valor de cada creación. Sin embargo, si tu pedido llega dañado, incompleto o no corresponde al producto 
+        que solicitaste, con gusto te ayudaremos a resolverlo. <strong>Tienes hasta 5 días hábiles después de recibir 
+        tu pedido para notificarnos cualquier incidencia o solicitar una devolución. </strong> Para hacerlo, comunícate 
+        con nosotros a través de <strong>contactoamanalli@gmail.com</strong> o por WhatsApp al  <strong>+52 81 2443 0038</strong>, 
+        incluyendo tu número de pedido, fotografías del producto y una breve descripción del motivo 
+        de la devolución. Una vez recibida tu solicitud, nuestro equipo evaluará el caso y te indicará 
+        los pasos a seguir. En caso de que la devolución sea aprobada, podrás optar por un cambio de producto, 
+        un vale por el mismo valor o el reembolso parcial o total, según corresponda. Los costos de envío por 
+        devolución correrán por cuenta de Amanalli únicamente si el error fue nuestro o el producto presenta 
+        un defecto de fabricación. En cualquier otro caso, el cliente deberá cubrir los gastos de envío asociados.
+        Nuestro compromiso es ofrecerte una experiencia justa, transparente y cercana, asegurándonos de que 
+        cada compra refleje el cuidado y la dedicación con la que trabajamos junto a los artesanos de México.
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h3 class="brand">Amanalli</h3>
+          <p class="tagline">Compra lo hecho con alma mexicana</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="section-title">Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Política de privacidad</a></li>
+            <li><a href="#" class="footer-link">Términos y condiciones</a></li>
+            <li><a href="../html/envydev.html" class="footer-link">Envíos y devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="section-title">Síguenos</h5>
+          <div class="d-flex justify-content-center justify-content-md-start gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="text-center mt-3 copyright">
+        <small>© <span id="current-year"></span> Amanalli. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Boostrap y script-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="../css/general.css" rel="stylesheet">
+  <link href="../css/envios-y-devoluciones.css" rel="stylesheet">
+
+<body>
+
+
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
