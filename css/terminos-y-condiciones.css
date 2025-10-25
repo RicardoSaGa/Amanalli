@@ -1,0 +1,32 @@
+.fondo-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(61, 46, 37, 0.1);
+    padding: 30px;
+}
+.logo-terminos-y-condiciones {
+    width: 170px;
+    height: 150px;
+    object-fit: cover;
+    display: center;
+}
+.accordion-button {
+    background-color: var(--color-fondo-pagina);
+    box-shadow: none !important;
+    border-bottom: none !important;
+    padding-left: 2em;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-icono);
+    font-family: var(--fuente-parrafos);
+    color: var(--color-fondo);
+}
+
+.accordion-item{
+    font-family: var(--fuente-parrafos);
+    color: var(--color-fondo);
+}
+.accordion-body{
+    padding: 1em 2.5em;
+}

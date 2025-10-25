@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanalli - Términos y condiciones</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/terminos-y-condiciones.css">
+
+    <!-- ICO -->
+    <link rel="icon" href="../Pictures/logo_Amanalli.png">
+
+
+</head>
+
+<body>
+    
+    <!-- NAVBAR -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- LOGO -->
+            <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="../Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
+            <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
+            </a>
+
+            <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
+            <div class="d-flex align-items-center gap-3">
+
+            <!-- PERFIL Y CARRITO (display móvil) -->
+            <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
+                <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                    <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                    <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+                </a>
+                </li>
+            </ul>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            </div>
+
+            <!-- LINKS DEL MENÚ (desktop / display de computadora)-->
+            <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
+            <ul class="navbar-nav text-center ">
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="./catalogo.html">Catálogo</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="./about.html">Acerca de</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item mx-3">
+                <a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a>
+                </li>
+            </ul>
+            </div>
+
+            <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
+            <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+                </a>
+            </li>
+            </ul>
+        </div>
+
+        <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
+        <div class="collapse d-xl-none " id="menuMobile">
+            <ul class="navbar-nav py-3 px-3">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
+            <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <!-- TERMINOS Y CONDICIONES -->
+    <div class="container ml-5 mr-5 my-5 align-items-center fondo-card">
+        <div class="row text-center justify-content-center">
+            <img class="logo-terminos-y-condiciones align-items-center" src="../Pictures/logo_Amanalli.png" alt="Logo Amanalli">
+            <h1>Términos y condiciones</h1>
+        </div>
+        <div class="row mt-3 my-4 pt-5 px-5">
+            <p>Versión 1.1 — Última actualización: 21 de octubre de 2025</p>
+            <p>Bienvenido al sitio web de Amanalli. Al acceder o utilizar este sitio web y nuestros servicios, usted acepta quedar legalmente vinculado por los siguientes Términos y Condiciones de Uso (“Términos”). Le pedimos que los lea detenidamente.</p>
+        </div>
+        <div class="row mt-3 my-4 px-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            1. Identidad legal
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>El presente sitio web es propiedad de Amanalli, marca comercial registrada. Todas las referencias a "nosotros", "nuestro" o "la tienda" hacen alusión a Amanalli, que actúa como intermediario entre talleres artesanales mexicanos y clientes finales para comercializar productos únicos hechos a mano.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            2. Aceptación de los términos
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Al acceder, navegar o utilizar nuestro sitio, así como al realizar una compra, usted reconoce haber leído, comprendido y aceptado expresamente estos Términos y Condiciones, junto con nuestras políticas complementarias (como la Política de Privacidad y la Política de Envíos y Devoluciones). <br>
+                            Estos Términos aplican a todos los usuarios, incluyendo navegadores, compradores, proveedores y cualquier persona que interactúe con el sitio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            3. Capacidad legal y veracidad de información
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Usted declara ser mayor de edad en su jurisdicción o contar con autorización legal para utilizar este sitio. Asimismo, garantiza que toda la información proporcionada es veraz, completa y actualizada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            4. Productos artesanales
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Los productos que vendemos son piezas artesanales elaboradas a mano por creadores mexicanos. Por lo tanto:</p>
+                            <ul class="mx-3">
+                                <li>Cada pieza es única.</li>
+                                <li>Las pequeñas variaciones en color, forma, tamaño o acabado son naturales y no se considerarán motivo de devolución, cambio o reclamación, salvo defectos comprobables de fabricación o daño durante el envío.</li>
+                                <li>Al comprar en Amanalli, usted reconoce esta naturaleza artesanal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            5. Precios y disponibilidad
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="fw-bold">Importante:</p>
+                            <ul class="mx-3">
+                                <li>Todos los precios están expresados en pesos mexicanos (MXN), salvo que se indique lo contrario.</li>
+                                <li>Nos reservamos el derecho de cambiar precios, descripciones o disponibilidad sin previo aviso.</li>
+                                <li>Una compra solo se considera válida una vez confirmado el pago y la disponibilidad del producto.</li>
+                                <li>En caso de error tipográfico o técnico en el precio o descripción de un producto, nos reservamos el derecho de cancelar pedidos afectados y reembolsar el monto pagado.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            6. Formas de pago
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Amanalli acepta pagos mediante pasarelas seguras integradas en nuestro sitio web. No almacenamos información bancaria en nuestros servidores. Todas las transacciones se procesan mediante plataformas seguras de terceros (por ejemplo, Stripe, PayPal, MercadoPago). Amanalli no tiene acceso a los datos bancarios de los usuarios.<br> 
+                            Para conocer los métodos de pago disponibles, consulte la sección correspondiente durante el proceso de compra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            7. Propiedad intelectual
+                        </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Todo el contenido disponible en este sitio web —incluyendo textos, imágenes, logotipos, diseño, código fuente, fotografías, íconos, videos y material gráfico— es propiedad de Amanalli o de sus respectivos titulares, y está protegido por las leyes nacionales e internacionales de derechos de autor y propiedad industrial.</p>
+                            <p class="fw-bold">Queda estrictamente prohibido, sin autorización previa y por escrito de Amanalli:</p>
+                            <ul class="mx-3">
+                                <li>Copiar, reproducir, distribuir, modificar o crear obras derivadas del contenido del sitio.</li>
+                                <li>Usar cualquier elemento del sitio con fines comerciales o promocionales de terceros.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            8. Uso prohibido
+                        </button>
+                    </h2>
+                    <div id="collapse8" class="accordion-collapse collapse" aria-labelled8" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Usted no puede utilizar este sitio web ni su contenido para:</p>
+                            <ul class="mx-3">
+                                <li>Cualquier fin ilegal o no autorizado.</li>
+                                <li>Violar leyes locales, estatales, federales o internacionales.</li>
+                                <li>Infringir nuestros derechos de propiedad intelectual o los de terceros.</li>
+                                <li>Transmitir virus, malware o cualquier código malicioso.</li>
+                                <li>Suplantar la identidad de otra persona o interferir con la seguridad del sitio.</li>
+                            </ul>
+                            <p>Amanalli podrá limitar, suspender o cancelar el acceso al sitio de cualquier usuario que incumpla estos Términos, sin necesidad de previo aviso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                            9. Limitación de responsabilidad
+                        </button>
+                    </h2>
+                    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Usted entiende y acepta que el uso de nuestro sitio y servicios se realiza bajo su propio riesgo. El sitio y sus contenidos se proporcionan “tal cual” y “según disponibilidad”.</p>
+                            <p>En la medida permitida por la ley, Amanalli no se hace responsable por:</p>
+                            <ul class="mx-3">
+                                <li>Errores en el sitio o interrupciones del servicio.</li>
+                                <li>Daños directos, indirectos o consecuenciales derivados del uso del sitio.</li>
+                                <li>Acciones de terceros, como proveedores externos o plataformas de pago.</li>
+                                <li>Retrasos o fallas en el cumplimiento de nuestras obligaciones cuando estas se deban a causas fuera de nuestro control razonable (como desastres naturales, fallos en internet, conflictos laborales o disposiciones gubernamentales).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                            10. Enlaces a sitios de terceros
+                        </button>
+                    </h2>
+                    <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Nuestro sitio puede contener enlaces a otros sitios que no están bajo nuestro control. No somos responsables del contenido, prácticas ni políticas de esos sitios. El acceso a ellos es bajo su propio riesgo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading11">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                            11. Modificaciones a los Términos
+                        </button>
+                    </h2>
+                    <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Nos reservamos el derecho de actualizar, modificar o reemplazar estos Términos en cualquier momento. Cualquier cambio será publicado en esta página y entrará en vigor a partir de su publicación. El uso continuado del sitio implica la aceptación de dichos cambios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                            12. Legislación aplicable y jurisdicción
+                        </button>
+                    </h2>
+                    <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Estos Términos y Condiciones se regirán e interpretarán conforme a las leyes de los Estados Unidos Mexicanos. Para cualquier controversia derivada del uso del sitio o de los servicios ofrecidos, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, renunciando a cualquier otro fuero que pudiera corresponderles.</p>   
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                            13. Información de contacto
+                        </button>
+                    </h2>
+                    <div id="collapse13" class="accordion-collapse collapse" aria-labelled13" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Preguntas acerca de los Términos de Servicio deben ser enviadas a contactoamanalli@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer text-white pt-5 pb-3">
+        <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-4">
+            <h3 class="brand">Amanalli</h3>
+            <p class="tagline">Compra lo hecho con alma mexicana</p>
+            </div>
+            <div class="col-md-4 mb-4">
+            <h5 class="section-title">Enlaces rápidos</h5>
+            <ul class="list-unstyled">
+                <li><a href="./politica.html" class="footer-link">Política de privacidad</a></li>
+                <li><a href="./terminos-y-condiciones.html" class="footer-link">Términos y condiciones</a></li>
+                <li><a href="./envydev.html" class="footer-link">Envíos y devoluciones</a></li>
+            </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+            <h5 class="section-title">Síguenos</h5>
+            <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="text-center mt-3 copyright">
+            <small>© <span id="current-year"></span> Amanalli. Todos los derechos reservados.</small>
+        </div>
+        </div>
+    </footer>
+    <!-- Boostrap y script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    </body>
+</html>
