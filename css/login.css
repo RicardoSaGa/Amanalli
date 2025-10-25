@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-fondo: #3d2e25;
+  --color-hover-enlace: #c6785e;
+  --color-icono: #d9a679;
+  --color-hover-icono: #c6785e;
+  --color-text: #e3ddd3;
+  --color-fondo-login: #ffffff;
+
+  --fuente-principal: 'Cormorant Garamond', serif;
+  --fuente-parrafos: 'Poppins', sans-serif;
+}
+
+input::placeholder {
+  color: rgba(61, 46, 37, 0.6) !important;
+  opacity: 0.9 !important;
+  font-style: italic;
+  font-weight: 100;
+}
+
+/* Espaciado general */
+.login-section {
+  padding: 2rem 1rem;
+}
+
+/* Responsive padding lateral */
+@media (max-width: 500px) {
+  .login-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ======= Login Card ======= */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-fondo-login);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.encabezado-login {
+  background-color: #c6785e; /* fondo café oscuro */
+  color: var(--color-text);
+  padding: 2rem 1.5rem;
+  margin: -2.5rem -2.5rem 1.5rem -2.5rem; /* sobrescribe el padding del contenedor */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  text-align: center;
+}
+
+.encabezado-login .titulo {
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.encabezado-login .subtitulo {
+  font-family: var(--fuente-parrafos);
+  font-size: 1rem;
+  color: #fff;
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--color-fondo);
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #eddcca;
+  background: #fffaf5;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input con ícono a la izquierda */
+.form-control.ps-5 {
+  padding-left: 2.5rem; /* más espacio para ícono */
+}
+
+/* Input con ícono a la derecha */
+.form-control.pe-5 {
+  padding-right: 2.5rem; /* más espacio para botón de ojo */
+}
+
+/* Estilo al enfocar el input */
+.form-control:focus {
+  border-color: var(--color-hover-enlace);
+  box-shadow: 0 0 0 0.2rem rgba(198, 120, 94, 0.25);
+  outline: none;
+  background: #fff;
+}
+
+.icono-input {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-icono);
+}
+
+.form-control.is-invalid {
+  background-image: none !important;
+  padding-right: 1rem !important;
+}
+
+/* Estilo para los mensajes de error */
+.error-msg {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  color: rgb(183, 11, 11);
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+} 
+
+/* Checkbox personalizado */
+.form-check-input {
+  border-color: var(--color-hover-enlace);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-hover-enlace);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(198, 120, 94, 0.25);
+}
+
+.btn-toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-icono);
+}
+
+.btn-toggle-password:hover {
+  color: var(--color-hover-icono);
+}
+
+.btn-login {
+  background-color: var(--color-hover-enlace);
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  font-family: var(--fuente-parrafos);
+}
+
+.btn-login:hover {
+  color: var(--color-text);
+  background-color: var(--color-icono);
+}
+
+
+.enlace-recuperar,
+.register-text a {
+  color: var(--color-hover-enlace);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.enlace-recuperar:hover,
+.register-text a:hover {
+  color: var(--color-hover-icono);
+  text-decoration: underline;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-fondo);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.legal-text {
+  font-size: 0.70rem;
+  color: var(--color-fondo);
+  font-family: var(--fuente-parrafos);
+  line-height: 1.4;
+}
+
+.legal-link {
+  color: var(--color-hover-enlace);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-link:hover {
+  color: var(--color-hover-icono);
+  text-decoration: underline;
+}
