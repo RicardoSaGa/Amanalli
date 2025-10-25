@@ -26,7 +26,7 @@ html {
 }
 body {
     background-color: var(--color-fondo-pagina);
-    color: #3d2e25;
+    color: var(--color-fondo)
 }
 
 .garamond{
@@ -42,8 +42,8 @@ body {
 /* ============================= */
 
 nav{
-    background-color: #f5efe6;
-    color: #3d2e25;
+    background-color: var(--color-fondo-pagina);
+    color: var(--color-fondo);
     width: 100%;
     font-weight: 500;
 }
@@ -57,8 +57,8 @@ nav{
 }
 .tituloheader {
     display: inline-block;
-    font-family: "Cormorant Garamond", serif;
-	color: #3d2e25;
+    font-family: var(--fuente-principal);
+	color: var(--color-fondo);
 	margin-top: 15px;
 	font-size: 20px;
 }
