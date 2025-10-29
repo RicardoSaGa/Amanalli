@@ -1,159 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amanalli - Catalogo</title>
-    
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Amanalli - Catalogo</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/catalogo.css">
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
 
-    <!-- ICO -->
-    <link rel="icon" href="../Pictures/logo_Amanalli.png">
+     <!-- Estilos personalizados -->
+     <link rel="stylesheet" href="../css/general.css">
+     <link rel="stylesheet" href="../css/catalogo.css">
+
+     <!-- ICO -->
+     <link rel="icon" href="../Pictures/logo_Amanalli.png">
 
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
+     <!-- NAVBAR -->
+     <header class="sticky-top">
+          <nav class="navbar navbar-expand-xl border-bottom shadow-sm px-4 py-2">
+               <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <!-- LOGO -->
-            <a href="../index.html" class="d-flex align-items-center text-decoration-none">
-            <img src="../Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
-            <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
-            </a>
+                    <!-- LOGO -->
+                    <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+                         <img src="../Pictures/logo_Amanalli.png" class="logoNavbar" alt="Logo Amanalli">
+                         <h2 class="tituloheader mb-3 ms-2">AMANALLI</h2>
+                    </a>
 
-            <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
-            <div class="d-flex align-items-center gap-3">
+                    <!-- ICONOS Y BOTÓN HAMBURGUESA (display móvil) -->
+                    <div class="d-flex align-items-center gap-3">
 
-            <!-- PERFIL Y CARRITO (display móvil) -->
-            <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
-                <li class="nav-item">
-                <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
-                    <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
-                </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
-                    <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
-                </a>
-                </li>
-            </ul>
+                         <!-- PERFIL Y CARRITO (display móvil) -->
+                         <ul class="navbar-nav d-flex flex-row align-items-center d-xl-none me-2" id="usuarioMovil">
+                              <li class="nav-item">
+                                   <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                                        <img src="../Pictures/perfil_de_usuario.png" alt="Perfil"
+                                             class="imgNavbar me-2">
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                                        <img src="../Pictures/carrito_de_productos.png" alt="Carrito"
+                                             class="imgNavbar me-2">
+                                   </a>
+                              </li>
+                         </ul>
 
-            <!-- BOTÓN HAMBURGUESA -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                         <!-- BOTÓN HAMBURGUESA -->
+                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#menuMobile">
+                              <span class="navbar-toggler-icon"></span>
+                         </button>
 
-            </div>
+                    </div>
 
-            <!-- LINKS DEL MENÚ (desktop / display de computadora)-->
-            <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
-            <ul class="navbar-nav text-center ">
-                <li class="nav-item mx-3">
-                <a class="nav-link" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item mx-3">
-                <a class="nav-link paginaActiva" href="./catalogo.html">Catálogo</a>
-                </li>
-                <li class="nav-item mx-3">
-                <a class="nav-link" href="./about.html">Acerca de</a>
-                </li>
-                <li class="nav-item mx-3">
-                <a class="nav-link" href="./blog.html">Blog</a>
-                </li>
-                <li class="nav-item mx-3">
-                <a class="nav-link" href="./contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item mx-3">
-                <a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a>
-                </li>
-            </ul>
-            </div>
+                    <!-- LINKS DEL MENÚ (desktop / display de computadora)-->
+                    <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
+                         <ul class="navbar-nav text-center ">
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link" href="../index.html">Inicio</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link paginaActiva" href="./catalogo.html">Catálogo</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link" href="./about.html">Acerca de</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link" href="./blog.html">Blog</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link" href="./contacto.html">Contacto</a>
+                              </li>
+                              <li class="nav-item mx-3">
+                                   <a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a>
+                              </li>
+                         </ul>
+                    </div>
 
-            <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
-            <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
-            <li class="nav-item">
-                <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
-                <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
-                <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
-                </a>
-            </li>
-            </ul>
-        </div>
+                    <!-- PERFIL Y CARRITO (desktop / display de computadora) -->
+                    <ul class="navbar-nav d-none d-xl-flex flex-row align-items-center" id="usuarioDesktop">
+                         <li class="nav-item">
+                              <a class="nav-link d-flex align-items-center hoverPerfil" href="./login.html">
+                                   <img src="../Pictures/perfil_de_usuario.png" alt="Perfil" class="imgNavbar me-2">
+                              </a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link d-flex align-items-center hoverCarrito" href="./carrito.html">
+                                   <img src="../Pictures/carrito_de_productos.png" alt="Carrito" class="imgNavbar me-2">
+                              </a>
+                         </li>
+                    </ul>
+               </div>
 
-        <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
-        <div class="collapse d-xl-none " id="menuMobile">
-            <ul class="navbar-nav py-3 px-3">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link paginaActiva" href="./catalogo.html">Catálogo</a></li>
-            <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
-            <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-            <li class="nav-item"><a class="nav-link" href="./formulario-de-creacion.html">Formulario de creación</a></li>
-            </ul>
-        </div>
-        </nav>
-    </header>
+               <!-- LINKS DEL MENÚ MÓVIL (display móvil) -->
+               <div class="collapse d-xl-none " id="menuMobile">
+                    <ul class="navbar-nav py-3 px-3">
+                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                         <li class="nav-item"><a class="nav-link paginaActiva" href="./catalogo.html">Catálogo</a></li>
+                         <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
+                         <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                         <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                         <li class="nav-item"><a class="nav-link" href="./formulario-de-creacion.html">Formulario de
+                                   creación</a></li>
+                    </ul>
+               </div>
+          </nav>
+     </header>
 
-    <!-- Borrar para trabajar en la pagina -->
-    <div style="height: 1000px;"></div>
+     <main class="container my-5">
+          <h2 class="mb-4">Catálogo</h2>
 
+          <div class="row">
+               <!-- Filtros -->
+               <aside class="col-md-3 mb-4">
+                    <div class="p-3 bg-light rounded shadow-sm">
+                         <h5>Filtros</h5>
+                         <hr>
+                         <h6>Categoría</h6>
+                         <div id="categoryFilters" class="mb-3"></div>
+                         <h6>Precio</h6>
+                         <div id="priceFilters" class="mb-3"></div>
+                         <h6>Región</h6>
+                         <div id="regionFilters"></div>
+                    </div>
+               </aside>
 
-    <!-- Footer -->
-    <footer class="footer text-white pt-5 pb-3">
-        <div class="container">
-        <div class="row text-center text-md-start">
-            <div class="col-md-4 mb-4">
-            <h3 class="brand">Amanalli</h3>
-            <p class="tagline">Compra lo hecho con alma mexicana</p>
-            </div>
-            <div class="col-md-4 mb-4">
-            <h5 class="section-title">Enlaces rápidos</h5>
-            <ul class="list-unstyled">
-                <li><a href="./politica.html" class="footer-link">Política de privacidad</a></li>
-                <li><a href="./terminos-y-condiciones.html" class="footer-link">Términos y condiciones</a></li>
-                <li><a href="./envydev.html" class="footer-link">Envíos y devoluciones</a></li>
-            </ul>
-            </div>
-            <div class="col-md-4 mb-4">
-            <h5 class="section-title">Síguenos</h5>
-            <div class="d-flex justify-content-center justify-content-md-start gap-3">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-            </div>
-            </div>
-        </div>
+               <!-- Catálogo -->
+               <section class="col-md-9">
+                    <div class="mb-3">
+                         <input type="text" id="searchInput" class="form-control" placeholder="Buscar productos...">
+                    </div>
+                    <p id="productCount" class="text-muted"></p>
+                    <div id="productGrid" class="row g-4"></div>
+               </section>
+          </div>
+     </main>
 
-        <hr class="footer-divider" />
+     <!-- Footer -->
+     <footer class="footer text-white pt-5 pb-3">
+          <div class="container">
+               <div class="row text-center text-md-start">
+                    <div class="col-md-4 mb-4">
+                         <h3 class="brand">Amanalli</h3>
+                         <p class="tagline">Compra lo hecho con alma mexicana</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                         <h5 class="section-title">Enlaces rápidos</h5>
+                         <ul class="list-unstyled">
+                              <li><a href="./politica.html" class="footer-link">Política de privacidad</a></li>
+                              <li><a href="./terminos-y-condiciones.html" class="footer-link">Términos y condiciones</a>
+                              </li>
+                              <li><a href="./envydev.html" class="footer-link">Envíos y devoluciones</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                         <h5 class="section-title">Síguenos</h5>
+                         <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                              <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                         </div>
+                    </div>
+               </div>
 
-        <div class="text-center mt-3 copyright">
-            <small>© <span id="current-year"></span> Amanalli. Todos los derechos reservados.</small>
-        </div>
-        </div>
-    </footer>
-    <!-- Boostrap y script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script>
+               <hr class="footer-divider" />
+
+               <div class="text-center mt-3 copyright">
+                    <small>© <span id="current-year"></span> Amanalli. Todos los derechos reservados.</small>
+               </div>
+          </div>
+     </footer>
+     <!-- Boostrap y script -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="../js/script.js"></script>
+     <script src="../js/catalogo.js"></script>
 </body>
+
 </html>
