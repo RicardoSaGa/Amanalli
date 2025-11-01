@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden; /* evita el scroll horizontal */
+}
+
 .body-neto {  
   font-family: var(--fuente-parrafos);
   background-color: var(--color-fondo-pagina);
@@ -8,44 +12,49 @@
   flex-direction: column;
 }
 
-.main-neto{
-  flex:1;
+.main-neto {
+  flex: 1;
 }
-#boton-catalogo{
+
+#boton-catalogo {
   background-color: var(--color-hover-icono);
   border: 0;
-  font-size: 1rem; /* tamaño de texto */
-  padding: 0.75rem 1.5rem; /* espacio interno */
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
   color: white;
   font-family: var(--fuente-parrafos);
-
-  
 }
-.popin{
+
+.popin {
   font-family: var(--fuente-parrafos);
 }
-.section-neto{
-background-color: var(--color-fondo-pagina);
+
+.section-neto {
+  background-color: var(--color-fondo-pagina);
 }
-.garamond{
+
+.garamond {
   font-family: var(--fuente-principal);
 }
-.section2{
+
+.section2 {
   background-color: white;
 }
-#alma-mexicana{
+
+#alma-mexicana {
   color: white;
   font-family: var(--fuente-principal);
   font-size: 4em;
 }
-#p-artesanias{
+
+#p-artesanias {
   color: white;
   font-family: var(--fuente-parrafos);
 }
 
 .hero-neto {
   min-height: 60vh; 
-  width: 100vw; 
+  width: 100%; /* corregido */
   background-image: url('https://images.unsplash.com/photo-1742314841957-65a5bd7fa1f8?...');
   background-size: cover;
   background-position: center;
@@ -59,21 +68,20 @@ background-color: var(--color-fondo-pagina);
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* mejora legibilidad del texto */
-  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  
   border-radius: 10px;
 }
 
-
 .card-img-top {
-  height: 350px; /* ajusta según tu diseño */
-  object-fit: cover; /* recorta sin deformar */
+  height: 350px;
+  object-fit: cover;
 }
 
-
-.sectionu{
-  height: 30vh;
+.sectionu {
+  background-color: #D9A679;
 }
+
 .historias-section {
   background: #faf6f2;
 }
@@ -92,47 +100,43 @@ background-color: var(--color-fondo-pagina);
   transition: 0.3s ease;
   text-decoration: none;
 }
+
 .btn-custom:hover {
   background-color: #8c5a37;
   color: #fff;
   transform: translateY(-2px);
 }
+
+/* eliminado el ancho y mÃ¡rgenes negativos */
 .full-width-bg {
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
-.sectionu{
-  background-color: #D9A679;
-}
-.bg-beige {
-  background-color: var(--color-icono); /* o el color que uses */
-  width: 100vw;              /* fuerza el ancho al viewport completo */
-  margin-left: calc(-50vw + 50%); /* compensa el centrado del container */
+  margin: 0;
+  left: 0;
+  right: 0;
 }
 
-#boton-abajo{
+.bg-beige {
+  background-color: var(--color-icono);
+  width: 100%;
+  margin: 0;
+}
+
+#boton-abajo {
   background-color: var(--color-fondo);
 }
 
-
-
 .producto-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%; /* permite que la tarjeta se expanda dentro de su columna */
+  height: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 .producto-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .fade-in {
   opacity: 0;
