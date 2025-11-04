@@ -113,10 +113,88 @@
         </div>
         </nav>
     </header>
+    <!-- MODAL NUEVO PRODUCTO -->
+    <section class=" producto d-flex align-items-center justify-content-center">
+        <div class="modal-card ">
+            <!-- Encabezado -->
+            <header class="modal-header">
+                <h2 class="modal-title">Nuevo Producto</h2>
+                <p class="modal-subtitle">Completa los datos para crear un nuevo producto</p>
+            </header>
 
-    <!-- Borrar para trabajar en la pagina -->
-    <div style="height: 1000px;"></div>
+            <!-- Formulario -->
+            <form id="nuevoProductoForm" novalidate>
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombreProducto">Nombre del Producto</label>
+                    <input type="text" id="nombreProducto" name="nombre" class="form-control" placeholder="Ej. Jarrón de Talavera" required />
+                </div>
+                <p class="error-msg" id="error-nombre-producto"></p>
 
+                <!-- Descripción -->
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Describe el producto..." rows="3" required></textarea>
+                </div>
+                <p class="error-msg" id="error-descripcion"></p>
+
+                <!-- Precio y Stock -->
+                <div class="form-row">
+                    <div>
+                        <div class="form-group">
+                            <label for="precio">Precio (MXN)</label>
+                            <input type="number" id="precio" name="precio" class="form-control" placeholder="Ej. 850" required />
+                        </div>
+                        <p class="error-msg" id="error-precio"></p>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="stock">Stock</label>
+                            <input type="number" id="stock" name="stock" class="form-control" placeholder="Ej. 12" required />
+                        </div>
+                        <p class="error-msg" id="error-stock"></p>          
+                    </div>            
+                </div>
+
+                <!-- Categoría -->
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria" class="form-control" required>
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="decoracion">Ceramica</option>
+                    <option value="artesanias">Textil</option>
+                    <option value="hogar">Decoracion</option>
+                    </select>
+                </div>
+                <p class="error-msg" id="error-categoria"></p>
+
+                <!-- Región -->
+                <div class="form-group">
+                    <label for="region">Región</label>
+                    <select id="region" name="region" class="form-control" required>
+                    <option value="" disabled selected>Selecciona una región</option>
+                    <option value="centro">Centro</option>
+                    <option value="norte">Norte</option>
+                    <option value="sur">Sur</option>
+                    </select>
+                </div>
+                <p class="error-msg" id="error-region"></p>
+
+                <!-- URL Imagen -->
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Imagen de Producto</label>
+                    <input class="form-control" type="file" id="formFile" required>
+                </div>
+                <p class="error-msg" id="error-imagen"></p>
+
+                <!-- Botones -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-crear">Crear Producto</button>
+                </div>
+                <p id="login-status" class="text-center mt-3"></p>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer text-white pt-5 pb-3">
@@ -155,6 +233,7 @@
     
     <!-- Boostrap y script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/creaProducto.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
