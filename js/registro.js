@@ -4,33 +4,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("password");
     const errorCorreo = document.getElementById("error-correo");
     const errorPassword = document.getElementById("error-password");
+    const errorPassword2 = document.getElementById("error-password2");
     const status = document.getElementById("login-status");
 
     const togglePassword = document.getElementById("togglePassword");
     const eyeOpen = document.getElementById("eyeOpen");
     const eyeClosed = document.getElementById("eyeClosed");
 
-    // Mostrar / ocultar contraseña
-    togglePassword.addEventListener("click", () => {
-        const isPassword = password.type === "password";
-        password.type = isPassword ? "text" : "password";
+    // Función reutilizable para mostrar/ocultar contraseña
+    function configurarTogglePassword(inputId, toggleBtnId, eyeOpenId, eyeClosedId) {
+        const input = document.getElementById(inputId);
+        const toggleBtn = document.getElementById(toggleBtnId);
+        const eyeOpen = document.getElementById(eyeOpenId);
+        const eyeClosed = document.getElementById(eyeClosedId);
+
+        toggleBtn.addEventListener("click", () => {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
         eyeOpen.classList.toggle("d-none");
         eyeClosed.classList.toggle("d-none");
-    });
+        });
+    }
 
-
-    //sadsj
-    const togglePassword2 = document.getElementById("togglePassword2");
-    const eyeOpen2 = document.getElementById("eyeOpen2");
-    const eyeClosed2 = document.getElementById("eyeClosed2");
-
-    togglePassword2.addEventListener("click", () => {
-        const isPassword2 = password.type === "password2";
-        password2.type = isPassword2 ? "text" : "password2";
-        eyeOpen2.classList.toggle("d-none");
-        eyeClosed2.classList.toggle("d-none");
-    });
-    //asldkls
+    // Llamadas para cada campo
+    configurarTogglePassword("password", "togglePassword", "eyeOpen", "eyeClosed");
+    configurarTogglePassword("password2", "togglePassword2", "eyeOpen2", "eyeClosed2");
 
     // Ocultar errores mientras se escribe
     email.addEventListener("input", () => {
@@ -66,17 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
             email.classList.remove("is-invalid");
         }
 
-        // Validación de contraseña
-        if (clave.length < 6) {
-            errorPassword.textContent =
-                "La contraseña debe tener al menos 6 caracteres.";
-            errorPassword.style.display = "block";
-            password.classList.add("is-invalid");
-            valid = false;
-        } else {
-            errorPassword.style.display = "none";
-            password.classList.remove("is-invalid");
-        }
 
         // Simulación de autenticación
         if (valid) {
