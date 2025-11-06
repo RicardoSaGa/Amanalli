@@ -143,3 +143,12 @@ html, body {
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
+.full-width-bg {
+  width: 100vw;       /* ancho total de la ventana */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* truco para compensar los márgenes del container */
+  margin-right: -50vw;
+}
