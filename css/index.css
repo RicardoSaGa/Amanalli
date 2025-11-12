@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+  --color-boton: #c6785e;
+  --color-icono: #d9a679;
+  --color-hover-icono: #c6785e;
+  --color-text: #e3ddd3;
+  --color-fondo-pagina: #f5efe6;
+
+  --fuente-principal: 'Cormorant Garamond', serif;
+  --fuente-parrafos: 'Poppins', sans-serif;
+}
+
 html, body {
   overflow-x: hidden; /* evita el scroll horizontal */
 }
@@ -23,6 +35,19 @@ html, body {
   padding: 0.75rem 1.5rem;
   color: white;
   font-family: var(--fuente-parrafos);
+}
+
+.agregar-carrito {
+  background-color: var(--color-boton);
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.agregar-carrito:hover {
+  background-color: var(--color-hover-icono);
 }
 
 .popin {
