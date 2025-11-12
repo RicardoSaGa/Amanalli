@@ -1,87 +1,111 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm");
+    const nombre = document.getElementById("nombre");
+    const telefono = document.getElementById("telefono");
     const email = document.getElementById("email");
     const password = document.getElementById("password");
+    const password2 = document.getElementById("password2");
+    const errorNombre = document.getElementById("error-nombre");
+    const errorTelefono = document.getElementById("error-telefono");
     const errorCorreo = document.getElementById("error-correo");
     const errorPassword = document.getElementById("error-password");
-    const status = document.getElementById("login-status");
+    const errorPassword2 = document.getElementById("error-password2");
+    const status = document.getElementById("registro-status");
 
-    const togglePassword = document.getElementById("togglePassword");
-    const eyeOpen = document.getElementById("eyeOpen");
-    const eyeClosed = document.getElementById("eyeClosed");
+    // Función reutilizable para mostrar/ocultar contraseña
+    function configurarTogglePassword(inputId, toggleBtnId, eyeOpenId, eyeClosedId) {
+        const input = document.getElementById(inputId);
+        const toggleBtn = document.getElementById(toggleBtnId);
+        const eyeOpen = document.getElementById(eyeOpenId);
+        const eyeClosed = document.getElementById(eyeClosedId);
 
-    // Mostrar / ocultar contraseña
-    togglePassword.addEventListener("click", () => {
-        const isPassword = password.type === "password";
-        password.type = isPassword ? "text" : "password";
+        toggleBtn.addEventListener("click", () => {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
         eyeOpen.classList.toggle("d-none");
         eyeClosed.classList.toggle("d-none");
-    });
+        });
+    }
 
-
-    //sadsj
-    const togglePassword2 = document.getElementById("togglePassword2");
-    const eyeOpen2 = document.getElementById("eyeOpen2");
-    const eyeClosed2 = document.getElementById("eyeClosed2");
-
-    togglePassword2.addEventListener("click", () => {
-        const isPassword2 = password.type === "password2";
-        password2.type = isPassword2 ? "text" : "password2";
-        eyeOpen2.classList.toggle("d-none");
-        eyeClosed2.classList.toggle("d-none");
-    });
-    //asldkls
+    // Llamadas para cada campo mostrar/ocultar contrase
+    configurarTogglePassword("password", "togglePassword", "eyeOpen", "eyeClosed");
+    configurarTogglePassword("password2", "togglePassword2", "eyeOpen2", "eyeClosed2");
 
     // Ocultar errores mientras se escribe
-    email.addEventListener("input", () => {
-        if (email.value.trim()) errorCorreo.textContent = "";
-    });
-
-    password.addEventListener("input", () => {
-        if (password.value.trim()) errorPassword.textContent = "";
-    });
+    function ocultarErrores(id, error){
+        id.addEventListener("input", () => {
+            if (id.value.trim()) error.textContent = "";
+        });
+    }
+    ocultarErrores(email, errorCorreo);
+    ocultarErrores(nombre, errorNombre);
+    ocultarErrores(telefono, errorTelefono);
+    ocultarErrores(password, errorPassword);
+    ocultarErrores(password2, errorPassword2);
 
     // Validación y simulación de autenticación
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-
+        console.log('Enviado');
         let valid = true;
-        errorCorreo.textContent = "";
-        errorPassword.textContent = "";
-        status.textContent = "";
 
+        const name = nombre.value.trim();
+        const phone = telefono.value.trim();
         const correo = email.value.trim();
         const clave = password.value.trim();
+        const clave2 = password2.value.trim();
 
         // Validación de correo electrónico
         const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
         if (!correoValido) {
-            errorCorreo.textContent = "Ingresa un correo válido.";
-            errorCorreo.style.display = "block";
-            email.classList.add("is-invalid");
-            valid = false;
+            showErrorStyles(errorCorreo, "Ingresa un correo válido.", email);
         } else {
-            errorCorreo.style.display = "none";
-            email.classList.remove("is-invalid");
+            hideErrorStyles(errorCorreo, email);
         }
+        const validarCorreo = valid;
 
-        // Validación de contraseña
-        if (clave.length < 6) {
-            errorPassword.textContent =
-                "La contraseña debe tener al menos 6 caracteres.";
-            errorPassword.style.display = "block";
-            password.classList.add("is-invalid");
-            valid = false;
+        // Validación nombre
+        if (name=="") {
+            showErrorStyles(errorNombre, "Ingresa tu nombre completo.", nombre);
         } else {
-            errorPassword.style.display = "none";
-            password.classList.remove("is-invalid");
+            hideErrorStyles(errorNombre, nombre);
         }
+        const validarNombre = valid;
+
+        // Validación telefono
+        const telefonoValido = /^\d{10}$/.test(phone);
+        if (!telefonoValido) {
+            showErrorStyles(errorTelefono, "Ingresa un número de teléfono válido.", telefono);
+        } else {
+            hideErrorStyles(errorTelefono, telefono);
+        }
+        const validarTelefono = valid;
+
+        // Validación contraseña mayor a 6
+        if (clave.length < 6) {
+            showErrorStyles(errorPassword, "La contraseña debe tener al menos 6 caracteres.", password);
+        } else {
+            hideErrorStyles(errorPassword, password);
+        }
+        const validarContrasena = valid;
+
+        // Validacion contraseñas iguales
+        if (clave!=clave2) {
+            showErrorStyles(errorPassword2, "La contraseña no coincide.", password2);
+        } else {
+            hideErrorStyles(errorPassword2, password2);
+        }
+        const validarContrasena2 = valid;
+
+        form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const valido = validarNombre && validarTelefono && validarCorreo && validarContrasena && validarContrasena2;
 
         // Simulación de autenticación
-        if (valid) {
-            status.textContent = "Iniciando sesión...";
-            status.style.color = "var(--color-hover-enlace)";
+        if (valido) {
+            // status.textContent = "Te has registrado exitosamente!";
+            // status.style.color = "var(--color-hover-enlace)";
 
             setTimeout(() => {
                 const usuarioAutenticado = true;
@@ -96,10 +120,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         })
                     );
 
-                    status.textContent = "Sesión iniciada correctamente";
+                    status.textContent = "Te has registrado exitosamente!";
                     status.style.color = "green";
+                    console.log(agregar());
+                    // Vacia los input al hacer el registro
                     email.value = "";
                     password.value = "";
+                    nombre.value = "";
+                    telefono.value = "";
+                    password2.value = "";
                 } else {
                     status.textContent = "Credenciales incorrectas";
                     status.style.color = "red";
@@ -107,4 +136,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1500);
         }
     });
+    });
 });
+function showErrorStyles(errorElement, message, element) {
+    errorElement.textContent = message;
+    errorElement.style.display = "block";
+    element.classList.add("is-invalid");
+    valid = false;
+}
+function hideErrorStyles(errorElement, element) {
+    errorElement.style.display = "none";
+    element.classList.remove("is-invalid");
+    valid = true;
+}
+
+function agregar (){
+    const listaUsuario = [
+        {
+            id: generarNumeroAleatorio(),
+            nombre: nombre.value,
+            telefono: telefono.value,
+            correo: email.value,
+            contrasena: password.value
+        }
+    ]
+    return listaUsuario;  
+}
+
+function generarNumeroAleatorio() {
+  return Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+}
