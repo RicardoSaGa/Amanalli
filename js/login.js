@@ -64,13 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
       password.classList.remove("is-invalid");
     }
 
-    // Simulación de autenticación
+    // Simulación de autenticación ---------------------------------------------------------------------
     if (valid) {
       status.textContent = "Iniciando sesión...";
       status.style.color = "var(--color-hover-enlace)";
 
       setTimeout(() => {
-        const usuarioAutenticado = true;
+        const usuarios = [
+    { email: "usuario1@amanalli.com", password: "123456" },
+    { email: "neto@amanalli.com", password: "abc123" },
+  ];
+
+  // Buscar si el usuario existe
+        const usuarioAutenticado = usuarios.find(
+          (u) => u.email === correo && u.password === clave);
 
         if (usuarioAutenticado) {
           localStorage.setItem(
@@ -81,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
               fecha: new Date().toISOString(),
             })
           );
-
+  //----------------------hasta aqui termina el bloque de simulación de autenticación----------------------
           status.textContent = "Sesión iniciada correctamente";
           status.style.color = "green";
           email.value = "";
