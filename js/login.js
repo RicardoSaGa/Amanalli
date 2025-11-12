@@ -52,28 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
       email.classList.remove("is-invalid");
     }
 
-    // Validación de contraseña
-    if (clave.length < 6) {
-      errorPassword.textContent =
-        "La contraseña debe tener al menos 6 caracteres.";
-      errorPassword.style.display = "block";
-      password.classList.add("is-invalid");
-      valid = false;
-    } else {
-      errorPassword.style.display = "none";
-      password.classList.remove("is-invalid");
-    }
 
-    // Simulación de autenticación ---------------------------------------------------------------------
+    // Simulación de autenticación usuarios pre almacenados ---------------------------------------------------------------------
     if (valid) {
+      const codigo = JSON.parse(localStorage.getItem("usuario"));
       status.textContent = "Iniciando sesión...";
       status.style.color = "var(--color-hover-enlace)";
 
       setTimeout(() => {
         const usuarios = [
-    { email: "usuario1@amanalli.com", password: "123456" },
-    { email: "neto@amanalli.com", password: "abc123" },
+    { email: codigo.correo, password: "abc123" }
   ];
+  console.log(usuarios);
 
   // Buscar si el usuario existe
         const usuarioAutenticado = usuarios.find(
