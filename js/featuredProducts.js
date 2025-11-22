@@ -29,7 +29,7 @@ const contenedor = document.querySelector("#productos-destacados");
 
 productosDestacados.forEach((producto) => {
   const tarjeta = document.createElement("div");
-  tarjeta.className = "col-md-4 h-100";
+  tarjeta.className = "col-md-4 h-100 mb-4";
   tarjeta.innerHTML = `
     <div class="card producto-card">
       <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
