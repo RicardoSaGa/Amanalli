@@ -58,6 +58,11 @@ h1{
   transform: translate(-50%, -50%);
 }
 
+#searchInput:focus {
+  border-color: #8b5e3c;
+  box-shadow: 0 0 0 0.2rem rgba(139, 94, 60, 0.25);
+}
+
 .card img {
   height: 180px;
   object-fit: cover;
