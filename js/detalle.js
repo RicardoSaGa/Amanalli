@@ -9,135 +9,135 @@ if (allProducts.length === 0) {
     JSON.stringify([
       {
         id: 1,
-        nombre: "Vasija de Barro",
-        categoria: "Cerámica",
+        name: "Vasija de Barro",
+        category: "Cerámica",
         region: "Oaxaca",
-        precio: 450,
+        price: 450,
         stock: 12,
         descripcion:
-          "Hermosa vasija elaborada a mano con barro natural, ideal para decorar tu cocina con un toque tradicional o almacenar especias.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.3f6e0295-3aa6-4870-9469-54e6bd7c5445",
+          "Hermosa vasija decorativa, elaborada a mano con barro natural, ideal para decorar tu cocina con un toque tradicional o almacenar especias.",
+        image:
+          "../Pictures/taza-cactus-barro.jpeg",
       },
       {
         id: 2,
-        nombre: "Textil Bordado",
-        categoria: "Textil",
+        name: "Bolsa de mano/Textil Bordado",
+        category: "Textil",
         region: "Chiapas",
-        precio: 680,
+        price: 680,
         stock: 8,
         descripcion:
-          "Tela bordada con motivos florales típicos de Chiapas, perfecta para caminos de mesa o decoración de interiores.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.eef98749-ad07-42da-8691-2f2cde31a3b7",
+          "Hermosa bolsa de mano artesanal, hecha con textil bordado a mano. Excelente artículo decorativo/funcional para complementar la vestimenta.",
+        image:
+          "../Pictures/bolsa-textil-1.jpeg",
       },
       {
         id: 3,
-        nombre: "Tapete Tejido",
-        categoria: "Decoración",
+        name: "Bolsa bordada a mano",
+        category: "Decoración",
         region: "Puebla",
-        precio: 890,
+        price: 890,
         stock: 5,
         descripcion:
-          "Tapete artesanal tejido con fibras naturales, ideal para dar calidez a cualquier espacio del hogar.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.b0067ffd-abda-45fb-9625-c7dcad731894",
+          "Bolsa bordada a mano con textil bordado artesanal. Implementa funcionalidad y moda con un precioso estilo artístico.",
+        image:
+          "../Pictures/bolsa-textil-2.jpeg",
       },
       {
         id: 4,
-        nombre: "Cazuela Artesanal",
-        categoria: "Cerámica",
+        name: "taza de café artesanal",
+        category: "Cerámica",
         region: "Michoacán",
-        precio: 520,
+        price: 520,
         stock: 10,
         descripcion:
-          "Cazuela de barro cocido con esmalte tradicional, perfecta para preparar guisos con sabor auténtico.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.b23a6517-b1eb-41f7-8879-5f89b72f70a5",
+          "taza de barro cocido con esmalte tradicional, perfecta para el café de la mañana o cualquier bebida caliente.",
+        image:
+          "../Pictures/taza-cafe-barro.jpeg",
       },
       {
         id: 5,
-        nombre: "Rebozo Tradicional",
-        categoria: "Textil",
+        name: "sudadera de jerga",
+        category: "Textil",
         region: "Oaxaca",
-        precio: 390,
+        price: 390,
         stock: 15,
         descripcion:
-          "Rebozo suave y ligero, tejido con técnicas ancestrales, ideal para vestir con elegancia y tradición.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.d77bdcf3-0bf9-44cb-8b3d-520781124eb4",
+          "sudadera suave y ligera, tejido con técnicas ancestrales, ideal para vestir con elegancia y tradición.",
+        image:
+          "../Pictures/sudadera-jerga-textil.jpeg",
       },
       {
         id: 6,
-        nombre: "Máscara Tallada",
-        categoria: "Decoración",
+        name: "Muñeca de trapo",
+        category: "Decoración",
         region: "Chiapas",
-        precio: 750,
+        price: 750,
         stock: 6,
         descripcion:
-          "Máscara de madera tallada a mano, inspirada en las danzas tradicionales chiapanecas. Ideal para colgar en muros.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.d200784f-cdce-48e4-91ed-e4ce2896260d",
+          "Hermosa muñeca de trapo, tradicional  artículo mexicano. Elaborada a mano con textil bordado y decoración artesanal",
+        image:
+          "../Pictures/muñeca-decoracion.jpeg",
       },
       {
         id: 7,
-        nombre: "Set de Vasos Pintados",
-        categoria: "Cerámica",
+        name: "Set de Vasos Pintados",
+        category: "Cerámica",
         region: "Puebla",
-        precio: 410,
+        price: 410,
         stock: 9,
         descripcion:
           "Conjunto de vasos de cerámica pintados a mano con motivos coloridos, perfectos para servir bebidas con estilo.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.19b0426a-6b8a-430f-8fb8-35d2cda01bdb",
+        image:
+          "../Pictures/tacita-barro.jpeg",
       },
       {
         id: 8,
-        nombre: "Camino de Mesa",
-        categoria: "Textil",
+        name: "Tortillero artesanal",
+        category: "Textil",
         region: "Michoacán",
-        precio: 480,
+        price: 480,
         stock: 11,
         descripcion:
-          "Camino de mesa tejido con hilos naturales, ideal para resaltar la decoración de tu comedor.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.4d23e9b6-9d78-4d09-ace7-f8358a2088ca",
+          "Hermoso y funcional tortillero con hermoso bordado artesanal, ideal para poner en el centro de la mesa y mantener las tortillas calientes.",
+        image:
+          "../Pictures/tortillero-textil.jpeg",
       },
       {
         id: 9,
-        nombre: "Figura Decorativa de Madera",
-        categoria: "Decoración",
+        name: "Alebrijes decorativos",
+        category: "Decoración",
         region: "Oaxaca",
-        precio: 640,
+        price: 640,
         stock: 7,
         descripcion:
-          "Figura tallada en madera con detalles únicos, perfecta para dar un toque artesanal a tu sala o estudio.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.57ea625f-ba09-4085-b5da-0e8c7db68efc",
+          "Los alebrijes originales, artesanales y llenos de cultura, hechos con procesos artesanales con arcilla cocida y pintados a mano.",
+        image:
+          "../Pictures/alebrijes-decoracion.jpeg",
       },
       {
         id: 10,
-        nombre: "Camino de Mesa",
-        categoria: "Textil",
+        name: "Guayabera artesanal",
+        category: "Textil",
         region: "Michoacán",
-        precio: 480,
+        price: 480,
         stock: 10,
         descripcion:
-          "Camino de mesa con bordado tradicional michoacano, ideal para celebraciones o decoración diaria.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.ab23e7a8-ea5f-4e8e-b7ec-c92940eafa06",
+          "Guayabera artesanal, elaborada con tela de lino fresca y transpirable. Excelente prenda para vestir elegante y tradicional al mismo tiempo ",
+        image:
+          "../Pictures/guayabera-textil.jpeg",
       },
       {
         id: 11,
-        nombre: "Figura Decorativa de Madera",
-        categoria: "Decoración",
+        name: "Sol decorativo",
+        category: "Decoración",
         region: "Oaxaca",
-        precio: 640,
+        price: 640,
         stock: 4,
         descripcion:
-          "Escultura artesanal en madera, pintada con pigmentos naturales. Ideal para coleccionistas o amantes del arte popular.",
-        imagen:
-          "https://copilot.microsoft.com/th/id/BCO.39cf333c-87fa-42d0-9611-9144309e1050",
+          "Escultura artesanal decorativa hecha de barro con forma de sol, pintada con pigmentos naturales. Ideal para coleccionistas o amantes del arte popular.",
+        image:
+          "../Pictures/decoracion-sol.jpeg",
       },
     ])
   );
@@ -167,19 +167,19 @@ if (!producto) {
      </div>
     <div class="row align-items-start">
       <div class="col-md-5">
-        <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded shadow-sm" style="max-height: 100%; object-fit: contain;" />
+        <img src="${producto.image}" alt="${producto.name}" class="img-fluid rounded shadow-sm" style="max-height: 100%; object-fit: contain;" />
       </div>
       <div class="col-md-7">
-        <h2 class="fw-bold mb-3" style="font-family: var(--fuente-principal);">${producto.nombre}</h2>
+        <h2 class="fw-bold mb-3" style="font-family: var(--fuente-principal);">${producto.name}</h2>
         <p class="mb-1" style="font-family: var(--fuente-parrafos);">Región: <strong style="color: #d9a679;">${producto.region}</strong></p>
-        <p class="fs-4 mb-3"><strong style="color: #c6785e;">$${producto.precio}</strong> <span style="color:#a0785a;">MXN</span></p>
+        <p class="fs-4 mb-3"><strong style="color: #c6785e;">$${producto.price}</strong> <span style="color:#a0785a;">MXN</span></p>
 
         <p class="mb-4" style="font-family: var(--fuente-parrafos);">
           ${producto.descripcion}
         </p>
 
         <ul class="list-unstyled mb-4" style="font-family: var(--fuente-parrafos);">
-          <li><strong>Categoría:</strong> ${producto.categoria}</li>
+          <li><strong>Categoría:</strong> ${producto.category}</li>
           <li><strong>Región:</strong> ${producto.region}</li>
           <li><strong>Disponibilidad:</strong> ${producto.stock} en stock</li>
         </ul>
