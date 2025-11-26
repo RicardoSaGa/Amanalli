@@ -28,8 +28,8 @@ function cargarCarrito() {
             <p class="text-muted">Cantidad: ${item.cantidad}</p>
             <p><strong>$${item.price}</strong> c/u</p>
           </div>
-          <div class="col-md-4 text-end">
-            <button class="btn btn-danger" onclick="eliminarProducto(${index})">
+          <div class="col-md-4 d-flex justify-content-center">
+            <button class="btn btn-eliminar btn-danger" onclick="eliminarProducto(${index})">
               Eliminar
             </button>
           </div>
