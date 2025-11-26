@@ -1,3 +1,5 @@
+import { login } from "./authService.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   const email = document.getElementById("email");
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Validación y simulación de autenticación
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     let valid = true;
@@ -52,42 +54,38 @@ document.addEventListener("DOMContentLoaded", () => {
       email.classList.remove("is-invalid");
     }
 
-
     // Simulación de autenticación usuarios pre almacenados ---------------------------------------------------------------------
     if (valid) {
       const codigo = JSON.parse(localStorage.getItem("usuario"));
       status.textContent = "Iniciando sesión...";
       status.style.color = "var(--color-hover-enlace)";
 
-      setTimeout(() => {
-        const usuarios = [
-    { email: codigo.correo, password: "abc123" }
-  ];
-  console.log(usuarios);
+      try {
+        // Llamada real a la API
+        const data = await login({ email: correo, password: clave });
 
-  // Buscar si el usuario existe
-        const usuarioAutenticado = usuarios.find(
-          (u) => u.email === correo && u.password === clave);
+        // Guardar info del usuario junto con el token
+        localStorage.setItem(
+          "usuario",
+          JSON.stringify({
+            correo,
+            sesionIniciada: true,
+            fecha: new Date().toISOString(),
+            token: data.token,
+          })
+        );
 
-        if (usuarioAutenticado) {
-          localStorage.setItem(
-            "usuario",
-            JSON.stringify({
-              correo: correo,
-              sesionIniciada: true,
-              fecha: new Date().toISOString(),
-            })
-          );
-  //----------------------hasta aqui termina el bloque de simulación de autenticación----------------------
-          status.textContent = "Sesión iniciada correctamente";
-          status.style.color = "green";
-          email.value = "";
-          password.value = "";
-        } else {
-          status.textContent = "Credenciales incorrectas";
-          status.style.color = "red";
-        }
-      }, 1500);
+        status.textContent = "Sesión iniciada correctamente";
+        status.style.color = "green";
+        email.value = "";
+        password.value = "";
+
+        // Aquí podrías redirigir al dashboard
+        // window.location.href = "/dashboard.html";
+      } catch (err) {
+        status.textContent = err.message;
+        status.style.color = "red";
+      }
     }
   });
 });
