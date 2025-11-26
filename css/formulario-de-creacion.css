@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-fondo: #3d2e25;
+  --color-hover-enlace: #c6785e;
+  --color-icono: #d9a679;
+  --color-hover-icono: #c6785e;
+  --color-text: #e3ddd3;
+  --color-fondo-login: #ffffff;
+
+  --fuente-principal: 'Cormorant Garamond', serif;
+  --fuente-parrafos: 'Poppins', sans-serif;
+}
+
+
+/* Modal general */
+.producto {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: var(--fuente-parrafos);
+  padding: 2rem 1rem;
+}
+
+.producto h2 {
+  font-family: var(--fuente-principal);
+}
+/* Card del formulario */
+.modal-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Encabezado */
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3d2e25;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  color: #a88b7f;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+
+/* Campos */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #3d2e25;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #a88b7f;
+  outline: none;
+}
+
+/* Fila doble */
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Botones */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+
+.btn-crear {
+  background-color: #c6785e;
+  color: #fff;
+}
+
+.btn-cancelar:hover {
+  background-color: #e8dcd4;
+}
+
+.btn-crear:hover {
+  background-color: #8f7263;
+}
+
+.error-msg {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  color: rgb(183, 11, 11);
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+} 
