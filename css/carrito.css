@@ -1,14 +1,20 @@
 
 /* ===== ESTILOS CARRITO ==== */
-html, body{
-    height: 100%;
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
-main{
-    flex: 1;
+
+main {
+  flex: 1;
 }
+
+
 .icono-carrito {
     font-size: 64px;
     color: #e67e22;
@@ -33,16 +39,18 @@ main{
 }
 
 .card img {
-  height: 120px;         
-  width: 120px;
-  object-fit: cover;      
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .card h5, .card p {
-  max-height: 3rem;      
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;   
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 .btn-eliminar{
     background-color: var(--color-hover-enlace);
@@ -54,10 +62,36 @@ main{
   justify-content: center;
 }
 
+#btnVaciarCarrito{
+  background-color: var(--color-hover-enlace);
+  border-color:var(--color-hover-enlace) ;
+}
+
 /* ===== ANIMACIÓN DE SPINNER ===== */
 .spin {
 animation: spin 1s linear infinite;
 }
 @keyframes spin {
 to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .card .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card .col-md-5 {
+    align-items: center;
+  }
+
+  .btn-eliminar {
+    width: 100%;
+    max-width: 200px;
+  }
 }
