@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
       email.classList.remove("is-invalid");
     }
 
-    if(password === "") {
+    if(password.value.trim() === "") {
       errorPassword.textContent = "Ingresa una contraseña valida";
       errorPassword.style.display = "block";
-      email.classList.add("is-invalid");
+      password.classList.add("is-invalid");
       valid = false;
     } else {
-      errorCorreo.style.display = "none";
-      email.classList.remove("is-invalid");
+      errorPassword.style.display = "none";
+      password.classList.remove("is-invalid");
     }
 
     // Simulación de autenticación usuarios pre almacenados ---------------------------------------------------------------------
