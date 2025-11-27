@@ -10,8 +10,11 @@
   --fuente-parrafos: 'Poppins', sans-serif;
 }
 
+/* html, body {
+  overflow-x: hidden; /* evita el scroll horizontal 
+} */
 html, body {
-  overflow-x: hidden; /* evita el scroll horizontal */
+  overflow-x: clip; /*evita el scroll horizontal y no quita el sticky del navbar*/
 }
 
 .body-neto {  
