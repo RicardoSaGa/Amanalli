@@ -1,11 +1,14 @@
 // authService.js
 import { API_BASE_URL } from "../connection/apiConfig.js";
 
-export async function login(credentials) {
+export async function login(correo, contrasena) {
   const response = await fetch(`${API_BASE_URL}/auth`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(credentials),
+    body: JSON.stringify({
+      email: correo,
+      password: contrasena,
+    }),
   });
 
   if (!response.ok) {
@@ -13,10 +16,9 @@ export async function login(credentials) {
   }
 
   const data = await response.json();
+  console.log(data);
 
-  // Guardar el token en sessionStorage o localStorage
   sessionStorage.setItem("jwt", data.token);
-  // o localStorage.setItem("jwt", data.token);
 
   return data;
 }
