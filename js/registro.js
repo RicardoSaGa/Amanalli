@@ -1,3 +1,9 @@
+import { API_BASE_URL } from "../connection/apiConfig.js";
+
+const apiConfig = {
+  usuarios: `${API_BASE_URL}/usuarios`
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   const nombre = document.getElementById("nombre");
@@ -12,13 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorPassword2 = document.getElementById("error-password2");
   const status = document.getElementById("registro-status");
 
-  // Función reutilizable para mostrar/ocultar contraseña
-  function configurarTogglePassword(
-    inputId,
-    toggleBtnId,
-    eyeOpenId,
-    eyeClosedId
-  ) {
+  // Función para mostrar/ocultar contraseña
+  function configurarTogglePassword(inputId, toggleBtnId, eyeOpenId, eyeClosedId) {
     const input = document.getElementById(inputId);
     const toggleBtn = document.getElementById(toggleBtnId);
     const eyeOpen = document.getElementById(eyeOpenId);
@@ -32,35 +33,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Llamadas para cada campo mostrar/ocultar contrase
-  configurarTogglePassword(
-    "password",
-    "togglePassword",
-    "eyeOpen",
-    "eyeClosed"
-  );
-  configurarTogglePassword(
-    "password2",
-    "togglePassword2",
-    "eyeOpen2",
-    "eyeClosed2"
-  );
+  configurarTogglePassword("password", "togglePassword", "eyeOpen", "eyeClosed");
+  configurarTogglePassword("password2", "togglePassword2", "eyeOpen2", "eyeClosed2");
 
   // Ocultar errores mientras se escribe
   function ocultarErrores(id, error) {
     id.addEventListener("input", () => {
       if (id.value.trim()) error.textContent = "";
+      id.classList.remove("is-invalid");
     });
   }
-  ocultarErrores(email, errorCorreo);
-  ocultarErrores(nombre, errorNombre);
-  ocultarErrores(telefono, errorTelefono);
-  ocultarErrores(password, errorPassword);
-  ocultarErrores(password2, errorPassword2);
+  [ [email,errorCorreo],[nombre,errorNombre],[telefono,errorTelefono],
+    [password,errorPassword],[password2,errorPassword2] ].forEach(([input,error]) => ocultarErrores(input,error));
 
-  // Validación y simulación de autenticación
+  function showErrorStyles(errorElement, message, element) {
+    errorElement.textContent = message;
+    errorElement.style.display = "block";
+    element.classList.add("is-invalid");
+  }
 
-  form.addEventListener("submit", (e) => {
+  function hideErrorStyles(errorElement, element) {
+    errorElement.style.display = "none";
+    element.classList.remove("is-invalid");
+  }
+
+  // Guardar usuario en backend
+  async function registrarUsuarioBackend(usuario) {
+    const res = await fetch(apiConfig.usuarios, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(usuario)
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  }
+
+  // Guardar usuario en localStorage
+  function guardarUsuarioLocal(usuario) {
+    const key = "usuarios_amanalli";
+    const actuales = JSON.parse(localStorage.getItem(key) || "[]");
+    actuales.push(usuario);
+    localStorage.setItem(key, JSON.stringify(actuales, null, 2));
+  }
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let valid = true;
 
@@ -70,108 +86,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const clave = password.value.trim();
     const clave2 = password2.value.trim();
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-      showErrorStyles(errorCorreo, "Ingresa un correo válido.", email);
-      valid = false;
-    } else {
-      hideErrorStyles(errorCorreo, email);
-    }
+    // Validaciones
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) { showErrorStyles(errorCorreo,"Ingresa un correo válido.",email); valid=false; } 
+    else hideErrorStyles(errorCorreo,email);
 
-    if (name === "") {
-      showErrorStyles(errorNombre, "Ingresa tu nombre completo.", nombre);
-      valid = false;
-    } else {
-      hideErrorStyles(errorNombre, nombre);
-    }
+    if (name === "") { showErrorStyles(errorNombre,"Ingresa tu nombre completo.",nombre); valid=false; } 
+    else hideErrorStyles(errorNombre,nombre);
 
-    if (!/^\d{10}$/.test(phone)) {
-      showErrorStyles(
-        errorTelefono,
-        "Ingresa un número de teléfono válido.",
-        telefono
-      );
-      valid = false;
-    } else {
-      hideErrorStyles(errorTelefono, telefono);
-    }
+    if (!/^\d{10}$/.test(phone)) { showErrorStyles(errorTelefono,"Ingresa un número de teléfono válido.",telefono); valid=false; } 
+    else hideErrorStyles(errorTelefono,telefono);
 
     const regexContrasena = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/;
-    if (!regexContrasena.test(clave)) {
-      showErrorStyles(
-        errorPassword,
-        "La contraseña debe tener al menos 6 caracteres, minusculas, al menos una mayúscula y un número.",
-        password
-      );
-      valid = false;
-    } else {
-      hideErrorStyles(errorPassword, password);
+    if (!regexContrasena.test(clave)) { showErrorStyles(errorPassword,"La contraseña debe tener al menos 6 caracteres, minúsculas, al menos una mayúscula y un número.",password); valid=false; } 
+    else hideErrorStyles(errorPassword,password);
+
+    if (clave !== clave2) { showErrorStyles(errorPassword2,"La contraseña no coincide.",password2); valid=false; } 
+    else hideErrorStyles(errorPassword2,password2);
+
+    if (!valid) return;
+
+    const usuario = {
+      nombreCompleto: name,
+      telefono: phone,
+      email: correo,
+      password: clave
+    };
+
+    // Guardar en localStorage primero
+    guardarUsuarioLocal({ ...usuario, fecha: new Date().toISOString() });
+
+    try {
+      await registrarUsuarioBackend(usuario);
+      status.textContent = "Usuario registrado correctamente!";
+      status.style.color = "green";
+
+      // Vaciar formulario
+      [nombre, telefono, email, password, password2].forEach(i => i.value = "");
+    } catch (err) {
+      console.error(err);
+      status.textContent = "Error al registrar el usuario.";
+      status.style.color = "orange";
     }
 
-    if (clave !== clave2) {
-      showErrorStyles(errorPassword2, "La contraseña no coincide.", password2);
-      valid = false;
-    } else {
-      hideErrorStyles(errorPassword2, password2);
-    }
-
-    if (valid) {
-      setTimeout(() => {
-        const usuarioAutenticado = true;
-
-        if (usuarioAutenticado) {
-          localStorage.setItem(
-            "usuario",
-            JSON.stringify({
-              correo: correo,
-              sesionIniciada: true,
-              fecha: new Date().toISOString(),
-            })
-          );
-
-          status.textContent = "Te has registrado exitosamente!";
-          status.style.color = "green";
-          console.log(agregar());
-
-          // Vaciar campos solo si todo está bien
-          email.value = "";
-          password.value = "";
-          nombre.value = "";
-          telefono.value = "";
-          password2.value = "";
-          setTimeout(() => {
-            status.textContent = "";
-          }, 1500);
-        } else {
-          status.textContent = "Credenciales incorrectas";
-          status.style.color = "red";
-        }
-      }, 1500);
-    }
+    setTimeout(() => { status.textContent = ""; }, 3000);
   });
 });
-function showErrorStyles(errorElement, message, element) {
-  errorElement.textContent = message;
-  errorElement.style.display = "block";
-  element.classList.add("is-invalid");
-}
-function hideErrorStyles(errorElement, element) {
-  errorElement.style.display = "none";
-  element.classList.remove("is-invalid");
-}
-
-function agregar() {
-  const listaUsuario = [
-    {
-      id: generarNumeroAleatorio(),
-      nombre: nombre.value,
-      telefono: telefono.value,
-      correo: email.value,
-      contrasena: password.value,
-    },
-  ];
-  return listaUsuario;
-}
-
-function generarNumeroAleatorio() {
-  return Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-}
