@@ -1,45 +1,74 @@
 const productosDestacados = [
   {
     id: 1,
-    nombre: "Vasija de barro",
-    autor: "Mario González · Oaxaca",
-    precio: 450,
-    imagen:
-      "https://images.unsplash.com/photo-1738322212738-40d684b36beb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpc2FuJTIwd29ya3Nob3AlMjBoYW5kc3xlbnwxfHx8fDE3NTk4NTM5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    name: "Vasija de barro",
+    region: "Oaxaca",
+    price: 450,
+    image:  "../Pictures/taza-cactus-barro.jpeg",
   },
   {
     id: 2,
-    nombre: "Cuenco de madera",
-    autor: "Lucía Pérez · Chiapas",
-    precio: 320,
-    imagen:
-      "https://images.unsplash.com/photo-1706794831005-e0cbae755fae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXhpY2FuJTIwcG90dGVyeSUyMGNlcmFtaWNzfGVufDF8fHx8MTc1OTk1ODQzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    name: "Muñeca de trapo",
+    region: "Chiapas",
+    price: 750,
+    image:
+      "../Pictures/muñeca-decoracion.jpeg",
   },
   {
     id: 3,
-    nombre: "Textil Bordado",
-    autor: "Juanita López · Puebla",
-    precio: 580,
-    imagen:
-      "https://images.unsplash.com/photo-1630793282756-bf99efa842ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXhpY2FuJTIwdGV4dGlsZSUyMHdlYXZpbmd8ZW58MXx8fHwxNzU5OTU4NDMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    name: "Guayabera artesanal",
+    region: "Michoacán",
+    price: 480,
+    image:
+     "../Pictures/guayabera-textil.jpeg",
   },
 ];
 
+// Renderizar productos
 const contenedor = document.querySelector("#productos-destacados");
 
 productosDestacados.forEach((producto) => {
   const tarjeta = document.createElement("div");
   tarjeta.className = "col-md-4 h-100 mb-4";
-  tarjeta.innerHTML = `
+
+   tarjeta.innerHTML = `
     <div class="card producto-card">
-      <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+      <img src="${producto.image}" class="card-img-top" alt="${producto.name}">
       <div class="card-body">
-        <h5 class="card-title garamond">${producto.nombre}</h5>
-        <p class="card-text popin">${producto.autor}</p>
-        <p class="card-text fw-bold">$${producto.precio}</p>
-        <button class="btn agregar-carrito" data-id="${producto.id}">Agregar</button>
+        <h5 class="card-title garamond">${producto.name}</h5>
+        <p class="card-text popin">${producto.region}</p>
+        <p class="card-text fw-bold">$${producto.price}</p>
+        <button class="btn btn-dark agregar-carrito" data-id="${producto.id}">
+          Agregar
+        </button>
       </div>
     </div>
   `;
+
   contenedor.appendChild(tarjeta);
 });
+
+// AddEventListener para que se agregue al carrito de compras
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("agregar-carrito")) {
+    const id = Number(e.target.dataset.id);
+    const producto = productosDestacados.find((p) => p.id === id);
+    agregarCarrito(producto);
+  }
+});
+
+// Función para agregar al carrito
+function agregarCarrito(producto) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const existe = carrito.find((item) => item.id === producto.id);
+
+  if (existe) {
+    existe.cantidad++;
+  } else {
+    carrito.push({ ...producto, cantidad: 1 });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  alert(`🛒 ${producto.name} agregado al carrito`);
+}
