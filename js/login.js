@@ -1,4 +1,4 @@
-import { login } from "./authService.js";
+//import { login } from "./authService.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorPassword = document.getElementById("error-password");
   const status = document.getElementById("login-status");
 
+  const input = document.getElementById("password")
   const togglePassword = document.getElementById("togglePassword");
   const eyeOpen = document.getElementById("eyeOpen");
   const eyeClosed = document.getElementById("eyeClosed");
 
   // Mostrar / ocultar contraseña
   togglePassword.addEventListener("click", () => {
-    const isPassword = password.type === "password";
-    password.type = isPassword ? "text" : "password";
+    const isPassword = input.type === "password";
+    input.type = isPassword ? "text" : "password";
     eyeOpen.classList.toggle("d-none");
     eyeClosed.classList.toggle("d-none");
   });
@@ -54,18 +55,46 @@ document.addEventListener("DOMContentLoaded", () => {
       email.classList.remove("is-invalid");
     }
 
+    if(password === "") {
+      errorPassword.textContent = "Ingresa una contraseña valida";
+      errorPassword.style.display = "block";
+      email.classList.add("is-invalid");
+      valid = false;
+    } else {
+      errorCorreo.style.display = "none";
+      email.classList.remove("is-invalid");
+    }
+
     // Simulación de autenticación usuarios pre almacenados ---------------------------------------------------------------------
     if (valid) {
+
+      const correoElectronico = email;
+      const url = `http://localhost:8081/api/v1/users/email?email=${correoElectronico}`
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+              status.textContent = "Sesión iniciada correctamente";
+              status.style.color = "green";
+              email.value = "";
+              password.value = "";
+        })
+        .catch(error =>{
+          status.textContent = "Usuario no registrado";
+          status.style.color = "red";
+        })
+      /*console.log("Estas entrando");
+      
       const codigo = JSON.parse(localStorage.getItem("usuario"));
       status.textContent = "Iniciando sesión...";
       status.style.color = "var(--color-hover-enlace)";
 
       try {
         // Llamada real a la API
-        const data = await login({ email: correo, password: clave });
+        
 
         // Guardar info del usuario junto con el token
-        localStorage.setItem(
+        /*localStorage.setItem(
           "usuario",
           JSON.stringify({
             correo,
@@ -75,17 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         );
 
-        status.textContent = "Sesión iniciada correctamente";
-        status.style.color = "green";
-        email.value = "";
-        password.value = "";
+      
 
         // Aquí podrías redirigir al dashboard
         // window.location.href = "/dashboard.html";
       } catch (err) {
         status.textContent = err.message;
         status.style.color = "red";
-      }
+      }*/
     }
   });
 });
