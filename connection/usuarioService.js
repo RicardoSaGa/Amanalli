@@ -1,5 +1,5 @@
 // userService.js
-import { apiClient } from "./apiClient";
+import { apiClient } from "../connection/apiClient.js";
 
 export const getUsers = () => apiClient("/users");
 

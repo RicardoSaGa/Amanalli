@@ -1,5 +1,5 @@
 // authService.js
-import { API_BASE_URL } from "./apiConfig";
+import { API_BASE_URL } from "../connection/apiConfig.js";
 
 export async function login(credentials) {
   const response = await fetch(`${API_BASE_URL}/auth`, {
