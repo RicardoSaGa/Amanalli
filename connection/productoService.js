@@ -1,20 +1,33 @@
-import { apiClient } from "./apiClient";
+import { apiClient } from "../connection/apiClient.js";
 
 export async function createProduct(productData) {
   return apiClient(
-    "/products",
+    "/productos",
     {
       method: "POST",
       body: JSON.stringify(productData),
     },
-    true
+    false
   ); // <-- true porque requiere JWT
 }
 
 export async function getProducts() {
-  return apiClient("/products", {}, false);
+  return apiClient("/productos", {}, false);
 }
 
 export async function getProductById(id) {
-  return apiClient(`/products/${id}`, {}, false);
+  return apiClient(`/productos/${id}`, {}, false);
+}
+
+export function mapProduct(apiProduct) {
+  return {
+    id: apiProduct.idProducto,
+    name: apiProduct.nombreProducto,
+    descripcion: apiProduct.descripcionProducto,
+    price: apiProduct.precio,
+    image: apiProduct.imagen,
+    stock: apiProduct.stock,
+    category: apiProduct.categorias?.nombreCategoria || "Sin categoría",
+    region: apiProduct.regiones?.nombreRegion || "Sin región",
+  };
 }

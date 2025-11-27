@@ -1,100 +1,18 @@
-const allProducts = [
-  {
-    id: 1,
-    name: "Vasija de Barro",
-    category: "Cerámica",
-    region: "Oaxaca",
-    price: 450,
-    image: "../Pictures/taza-cactus-barro.jpeg",
-  },
-  {
-    id: 2,
-    name: "Bolsa de mano artesanal",
-    category: "Textil",
-    region: "Chiapas",
-    price: 680,
-    image: "../Pictures/bolsa-textil-1.jpeg",
-  },
-  {
-    id: 3,
-    name: "Bolsa bordada a mano",
-    category: "Textil",
-    region: "Puebla",
-    price: 890,
-    image: "../Pictures/bolsa-textil-2.jpeg",
-  },
-  {
-    id: 4,
-    name: "taza de café artesanal",
-    category: "Cerámica",
-    region: "Michoacán",
-    price: 520,
-    image: "../Pictures/taza-cafe-barro.jpeg",
-  },
-  {
-    id: 5,
-    name: "sudadera de jerga",
-    category: "Textil",
-    region: "Oaxaca",
-    price: 390,
-    image: "../Pictures/sudadera-jerga-textil.jpeg",
-  },
-  {
-    id: 6,
-    name: "Muñeca de trapo",
-    category: "Decoración",
-    region: "Chiapas",
-    price: 750,
-    image: "../Pictures/muñeca-decoracion.jpeg",
-  },
-  {
-    id: 7,
-    name: "Set de Vasos Pintados",
-    category: "Cerámica",
-    region: "Puebla",
-    price: 410,
-    image: "../Pictures/tacita-barro.jpeg",
-  },
-  {
-    id: 8,
-    name: "Tortillero artesanal",
-    category: "Textil",
-    region: "Michoacán",
-    price: 480,
-    image: "../Pictures/tortillero-textil.jpeg",
-  },
-  {
-    id: 9,
-    name: "Alebrijes decorativos",
-    category: "Decoración",
-    region: "Oaxaca",
-    price: 640,
-    image: "../Pictures/alebrijes-decoracion.jpeg",
-  },
-  {
-    id: 10,
-    name: "Guayabera artesanal",
-    category: "Textil",
-    region: "Michoacán",
-    price: 480,
-    image: "../Pictures/guayabera-textil.jpeg",
-  },
-  {
-    id: 11,
-    name: "Sol decorativo",
-    category: "Decoración",
-    region: "Oaxaca",
-    price: 640,
-    image: "../Pictures/decoracion-sol.jpeg",
-  },
-];
+import { getCategories } from "../connection/categoriaService.js";
+import { getRegiones } from "../connection/regionService.js";
+import { apiClient } from "../connection/apiClient.js";
 
 // 🔹 Elementos del DOM
 const productGrid = document.getElementById("productGrid");
 const productCount = document.getElementById("productCount");
 const searchInput = document.getElementById("searchInput");
 
-let filteredProducts = [...allProducts];
+//let filteredProducts = [...allProducts];
+let allProducts = [];
+let filteredProducts = [];
+
+let allCategories = [];
+let allRegions = [];
 
 // Renderizar productos
 function renderProducts() {
@@ -162,17 +80,6 @@ function agregarCarrito(producto) {
   alert(`🛒 ${producto.name} agregado al carrito`);
 }
 
-//  Generar filtros dinámicos
-function generateFilters() {
-  const categories = ["Todas", ...new Set(allProducts.map((p) => p.category))];
-  const regions = ["Todas", ...new Set(allProducts.map((p) => p.region))];
-  const prices = ["Todos", "Menos de $400", "$400 - $700", "Más de $700"];
-
-  fillFilter("categoryFilters", categories, "category");
-  fillFilter("regionFilters", regions, "region");
-  fillFilter("priceFilters", prices, "price");
-}
-
 function fillFilter(containerId, options, type) {
   const container = document.getElementById(containerId);
   container.innerHTML = "";
@@ -193,7 +100,45 @@ function fillFilter(containerId, options, type) {
   });
 }
 
-// Aplicar filtros
+document.addEventListener("DOMContentLoaded", async () => {
+  // 1. Cargar productos
+  allProducts = await obtenerProductos();
+  filteredProducts = [...allProducts];
+
+  // 2. Cargar filtros desde backend
+  await cargarFiltrosDesdeBackend();
+
+  // 3. Renderizar productos
+  renderProducts();
+
+  // 4. Buscar por texto en tiempo real
+  searchInput.addEventListener("input", () => renderProducts());
+});
+
+async function obtenerProductos() {
+  try {
+    const productos = await apiClient("/productos", { method: "GET" });
+    return productos.map(mapearProductoBackend);
+  } catch (error) {
+    console.error("Error cargando productos:", error);
+    return [];
+  }
+}
+
+function mapearProductoBackend(p) {
+  return {
+    id: p.idProducto,
+    name: p.nombreProducto,
+    description: p.descripcionProducto,
+    price: p.precio,
+    image: p.imagen,
+    stock: p.stock,
+    active: p.estatusProducto,
+    category: p.categorias?.nombreCategoria || "Sin categoría",
+    region: p.regiones?.nombreRegion || "Sin región",
+  };
+}
+
 function applyFilters() {
   const category = document.querySelector(
     'input[name="category"]:checked'
@@ -217,9 +162,21 @@ function applyFilters() {
   renderProducts();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  generateFilters();
-  renderProducts();
+// gnerar filtros dinamicos
+async function cargarFiltrosDesdeBackend() {
+  try {
+    const categorias = await getCategories();
+    const regiones = await getRegiones();
 
-  searchInput.addEventListener("input", () => renderProducts());
-});
+    allCategories = ["Todas", ...categorias.map((c) => c.nombreCategoria)];
+    allRegions = ["Todas", ...regiones.map((r) => r.nombreRegion)];
+
+    const prices = ["Todos", "Menos de $400", "$400 - $700", "Más de $700"];
+
+    fillFilter("categoryFilters", allCategories, "category");
+    fillFilter("regionFilters", allRegions, "region");
+    fillFilter("priceFilters", prices, "price");
+  } catch (error) {
+    console.error("Error cargando filtros: ", error);
+  }
+}
