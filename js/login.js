@@ -1,4 +1,9 @@
-//import { login } from "./authService.js";
+import { login } from "../connection/authService.js";
+import { API_BASE_URL } from "../connection/apiConfig.js";
+
+const apiConfig = {
+  usuarios: `${API_BASE_URL}/usuarios`
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
@@ -67,51 +72,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Simulación de autenticación usuarios pre almacenados ---------------------------------------------------------------------
     if (valid) {
-
-      const correoElectronico = email;
-      const url = `http://localhost:8081/api/v1/users/email?email=${correoElectronico}`
-
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-              status.textContent = "Sesión iniciada correctamente";
-              status.style.color = "green";
-              email.value = "";
-              password.value = "";
-        })
-        .catch(error =>{
-          status.textContent = "Usuario no registrado";
-          status.style.color = "red";
-        })
-      /*console.log("Estas entrando");
-      
-      const codigo = JSON.parse(localStorage.getItem("usuario"));
-      status.textContent = "Iniciando sesión...";
-      status.style.color = "var(--color-hover-enlace)";
-
       try {
-        // Llamada real a la API
-        
+        const data = await login(correo, clave); // tu función que hace el POST al backend
 
-        // Guardar info del usuario junto con el token
-        /*localStorage.setItem(
-          "usuario",
-          JSON.stringify({
-            correo,
-            sesionIniciada: true,
-            fecha: new Date().toISOString(),
-            token: data.token,
-          })
-        );
+        // Si el backend respondió correctamente (ej. te regresó el token):
+        if (data) {
+          status.textContent = "Sesión iniciada correctamente";
+          status.style.color = "green";
 
-      
+          email.value = "";
+          password.value = "";
 
-        // Aquí podrías redirigir al dashboard
-        // window.location.href = "/dashboard.html";
-      } catch (err) {
-        status.textContent = err.message;
+          // Redirección al index
+          window.location.href = "../index.html"; // o "/" según tu estructura
+        }
+      } catch (error) {
+        status.textContent = "Usuario o contraseña incorrectos";
         status.style.color = "red";
-      }*/
+      }
     }
+
   });
 });
