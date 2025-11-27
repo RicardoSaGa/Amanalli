@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-:root {
+:root{
   --color-fondo: #3d2e25;
   --color-hover-enlace: #c6785e;
   --color-icono: #d9a679;
@@ -12,131 +12,136 @@
   --fuente-parrafos: 'Poppins', sans-serif;
 }
 
-
-/* Modal general */
+/* CONTENEDOR GENERAL */
 .producto {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
+  padding: 3rem 1rem;
   font-family: var(--fuente-parrafos);
-  padding: 2rem 1rem;
-}
-
-.producto h2 {
-  font-family: var(--fuente-principal);
-}
-/* Card del formulario */
-.modal-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
   width: 100%;
-  max-width: 500px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-/* Encabezado */
-.modal-header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
 }
 
-.modal-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #3d2e25;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.modal-subtitle {
-  font-size: 1rem;
-  color: #a88b7f;
-  margin-top: 0.4rem;
-  line-height: 1.4;
-}
-
-
-/* Campos */
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: #3d2e25;
-}
-
-.form-control {
+/* CARD DEL FORMULARIO */
+.modal-card {
   width: 100%;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  transition: border-color 0.3s ease;
+  max-width: 520px;
+  background-color: var(--color-fondo-login);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem 2rem 1.75rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  animation: fadeIn 0.6s ease;
+  overflow: hidden; /* Mantiene borde redondeado */
 }
 
-.form-control:focus {
-  border-color: #a88b7f;
-  outline: none;
+/* ENCABEZADO */
+.encabezado-login {
+  background-color: var(--color-hover-enlace);
+  color: var(--color-text);
+  padding: 2.1rem 1.5rem;
+  margin: -1.5rem -1.75rem 1.5rem -1.75rem; /* Que el header abarque todo el ancho */
+  border-radius: 12px 12px 0 0;
+  text-align: center;
 }
 
-/* Fila doble */
-.form-row {
-  display: flex;
-  gap: 1rem;
-}
-
-.form-row .form-group {
-  flex: 1;
-}
-
-/* Botones */
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-
-.btn-crear {
-  background-color: #c6785e;
+.encabezado-login .titulo {
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  margin: 0;
   color: #fff;
 }
 
-.btn-cancelar:hover {
-  background-color: #e8dcd4;
+.encabezado-login .subtitulo {
+  font-family: var(--fuente-parrafos);
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+  color: #fff;
 }
 
-.btn-crear:hover {
-  background-color: #8f7263;
+/* ETIQUETAS */
+.form-label {
+  font-weight: 500;
+  color: var(--color-fondo);
 }
 
+/* INPUTS */
+.form-control {
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  border: 1.5px solid #eddcca;
+  background: #fffaf5;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--fuente-parrafos);
+  font-size: 0.95rem;
+}
+
+/* padding extra si tiene ícono */
+.form-control.ps-5 {
+  padding-left: 2.5rem;
+}
+
+/* ICONO */
+.icono-input {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-icono);
+}
+
+/* FOCUS */
+.form-control:focus {
+  border-color: var(--color-hover-enlace);
+  box-shadow: 0 0 0 0.2rem rgba(198,120,94,0.18);
+  outline: none;
+  background: #fff;
+}
+
+/* INVALID */
+.form-control.is-invalid {
+  border-color: rgb(183,11,11);
+  box-shadow: 0 0 0 0.12rem rgba(183,11,11,0.12);
+}
+
+/* ERRORES */
 .error-msg {
-  font-size: 0.8rem;
-  margin-top: 0.25rem;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
   color: rgb(183, 11, 11);
   display: none;
-  animation: fadeIn 0.3s ease-in-out;
-} 
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* BOTONES */
+.btn-login, .btn-crear {
+  background-color: var(--color-hover-enlace);
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  font-family: var(--fuente-parrafos);
+  border-radius: 10px;
+}
+
+.btn-login:hover, .btn-crear:hover {
+  background-color: var(--color-icono);
+  color: var(--color-text);
+}
+
+/* PRECIO + STOCK */
+.form-row {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-end;
+}
+
+@media (max-width: 560px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
